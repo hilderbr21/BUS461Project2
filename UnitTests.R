@@ -47,9 +47,6 @@ TestSFEDNV<- function(){
   checkEquals(c(6,8,1175),SFRDNV(a,b,w))
   #modified epsilon
   checkEquals(c(6,8,1175),SFRDNV(a,b,w,epsilon=0.001))
-  x(new_coord)<-0 #will change this value to "x" in the future
-  y(new_coord)<-0 #will change this value to "y" in the future
-  total_cost<-0
   
   #check for invalid arguments
   #1. invalid datatype
