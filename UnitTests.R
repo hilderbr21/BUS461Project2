@@ -37,6 +37,9 @@ TestSFEDNV<- function(){
   #manually test converged 
   #create a data.frame called data.frame.SFEDNV containing: 
   #"x(new_coord)", "y(new_coord)", and "total_cost"
+  a<-c(2,6,9,12,3,6,1,6,10,10,2,1,4,4)
+  b<-c(3,1,9,5,9,2,6,4,3,8,8,4,5,2)
+  w<-c(20,10,45,15,25,5,15,10,5,40,5,5,5,5)
   x(new_coord)<-0
   y(new_coord)<-0
   total_cost<-0
