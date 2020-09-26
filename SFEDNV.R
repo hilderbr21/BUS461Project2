@@ -16,6 +16,9 @@ xDenomTemp<-0
 yNumerTemp<-0
 yDenomTemp<-0
 
-for(j in length store){
-  xNumerTemp<- xNumerTemp + w*a
+for(j in length: store){
+  xNumerTemp<- xNumerTemp + (w*a)
+  xDenomTemp <- 
+}
+
 }
