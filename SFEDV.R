@@ -7,3 +7,6 @@ SFEDNV <- function(a,b,w,epsilon=0.01) {
   }
   
 }
+
+
+
