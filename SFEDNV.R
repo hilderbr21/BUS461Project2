@@ -33,7 +33,7 @@ calcCentroid<-for(j in 2: i + 1){
     
 #if test passes, calculate Total Cost
     total_cost<-w*sqrt((abs(x-a) + abs(y-b)))
-    Argument_List<-list(x0, y0, TC )
+    Argument_List<-list(x, y, total_cost )
     return(Argument_List)
  } 
 
