@@ -1,6 +1,9 @@
+#Unit test suit
+#@author Marc Hilderbrand
+
 require(RUnit)
 
-testSFRDNV<-function()
+#TEST SUITE FOR SFRDNV
 # define the test suite
 testsuite.SFRDNV<-defineTestSuite("SFRDNV",
                                dirs = getwd(),
@@ -9,8 +12,24 @@ testsuite.SFRDNV<-defineTestSuite("SFRDNV",
 )
 
 # run the test suite and save the results
-testResults<-runTestSuite(testsuite.SFRDNV)
+SFRDNVtestResults<-runTestSuite(testsuite.SFRDNV)
 
 # now, obtain a formatted printout of the test results
-printTextProtocol(testResults)
+printTextProtocol(SFRDNVtestResults)
+
+
+#TEST SUITE FOR SFRDV
+# define the test suite
+testsuite.SFRDV<-defineTestSuite("SFRDV",
+                                  dirs = getwd(),
+                                  testFileRegexp = "^runit*.+\\.R",
+                                  testFuncRegexp = "test.+"
+)
+
+# run the test suite and save the results
+SFRDVtestResults<-runTestSuite(testsuite.SFRDV)
+
+# now, obtain a formatted printout of the test results
+printTextProtocol(SFRDVtestResults)
+
 
