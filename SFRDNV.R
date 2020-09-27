@@ -1,5 +1,6 @@
 SFRDNV <- function(a,b,w,epsilon=0.01) {
   
+  #validity check
   if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")){
     return(-1)
   }
