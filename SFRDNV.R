@@ -15,6 +15,7 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
   
   
   
+  
   #sortingMatrix <- matrix(a,b,w, dimnames=c('a','b','w'))
   #print(sortingMatrix)
 }

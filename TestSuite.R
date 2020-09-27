@@ -18,6 +18,7 @@ SFRDNVtestResults<-runTestSuite(testsuite.SFRDNV)
 printTextProtocol(SFRDNVtestResults)
 
 
+
 #TEST SUITE FOR SFRDV
 # define the test suite
 testsuite.SFRDV<-defineTestSuite("SFRDV",
@@ -32,4 +33,19 @@ SFRDVtestResults<-runTestSuite(testsuite.SFRDV)
 # now, obtain a formatted printout of the test results
 printTextProtocol(SFRDVtestResults)
 
+
+
+#TEST SUITE FOR SFEDNV
+# define the test suite
+testsuite.SFEDNV<-defineTestSuite("SFEDNV",
+                                 dirs = getwd(),
+                                 testFileRegexp = "^runit*.+\\.R",
+                                 testFuncRegexp = "test.+"
+)
+
+# run the test suite and save the results
+SFRDVtestResults<-runTestSuite(testsuite.SFEDNV)
+
+# now, obtain a formatted printout of the test results
+printTextProtocol(SFRDVtestResults)
 
