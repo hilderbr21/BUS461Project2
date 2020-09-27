@@ -8,7 +8,6 @@ SFEDNV <- function(a,b,w,epsilon=0.01) {
   
 }
 
-{
 # calculate x0 and y0 using calcCentroid 
 x<-0
 y<-0
@@ -28,12 +27,13 @@ calcCentroid<-for(j in 2: i + 1){
   x[j] <-xNumerTemp/xDenomTemp
   y[j] <-yNumerTemp/yDenomTemp
 }
+
 # test for convergence  
-  if ( | x[i] - x[i-1] | <= epsilion && | y[i] - y[i-1] | <= epsilion){
+  if (abs(x[i] - x[i-1]) <= epsilion && abs(y[i] - y[i-1]) <= epsilion){
     
-#Calculate Total Cost
-    TC<-w(|x-a| + |y-b|)
-    Argument_List<-list(x0, y0, )
+#if test passes, calculate Total Cost
+    total_cost<-w*sqrt((abs(x-a) + abs(y-b)))
+    Argument_List<-list(x0, y0, TC )
     return(Argument_List)
  } 
-}
+
