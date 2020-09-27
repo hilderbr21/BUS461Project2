@@ -1,24 +1,31 @@
 SFEDNV <- function(a,b,w,epsilon=0.01) {
-  if(!numeric(a) | !numeric(b) | !numeric(w)){
+  if(!numeric(a) | !numeric(b) | !numeric(w)){ #Run a test to make sure values >=0
     return -1;
   }
   if(a < 0  | b < 0 | w < 0 | epsilon < 0){
-    return("Error. Enter a weight greater than 0");
+    return("Error. Enter a value greater than 0");
   }
   
 }
 
 {
-x<-0
-y<-0
+# calculate x0 and y0 using calcCentroid 
+x0<-0
+y0<-0
 xNumerTemp<-0
 xDenomTemp<-0
 yNumerTemp<-0
 yDenomTemp<-0
+i<-1
 
-for(j in length: store){
-  xNumerTemp<- xNumerTemp + (w*a)
-  xDenomTemp <- 
-}
-
+# calculate revised coordinates
+for(j in 2: i + 1){
+  xNumerTemp<- xNumerTemp + (w[j]*a[j])
+  xDenomTemp <- xDenomTemp + w[j]
+  yNumerTemp <- yNumerTemp + (w[j]*b[j])
+  yDenomTemp <- yDenomTemp + w[j]
+  
+  x0 <-xNumerTemp/xDenomTemp
+  Y0 <-yNumerTemp/yDenomTemp
+ } 
 }
