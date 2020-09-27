@@ -10,8 +10,8 @@ SFEDNV <- function(a,b,w,epsilon=0.01) {
 
 {
 # calculate x0 and y0 using calcCentroid 
-x0<-0
-y0<-0
+x<-0
+y<-0
 xNumerTemp<-0
 xDenomTemp<-0
 yNumerTemp<-0
@@ -19,14 +19,21 @@ yDenomTemp<-0
 i<-1
 
 # calculate revised coordinates
-for(j in 2: i + 1){
+calcCentroid<-for(j in 2: i + 1){
   xNumerTemp<- xNumerTemp + (w[j]*a[j])
   xDenomTemp <- xDenomTemp + w[j]
   yNumerTemp <- yNumerTemp + (w[j]*b[j])
   yDenomTemp <- yDenomTemp + w[j]
   
-  x0 <-xNumerTemp/xDenomTemp
-  Y0 <-yNumerTemp/yDenomTemp
-  
+  x[j] <-xNumerTemp/xDenomTemp
+  y[j] <-yNumerTemp/yDenomTemp
+}
+# test for convergence  
+  if ( | x[i] - x[i-1] | <= epsilion && | y[i] - y[i-1] | <= epsilion){
+    
+#Calculate Total Cost
+    TC<-w(|x-a| + |y-b|)
+    Argument_List<-list(x0, y0, )
+    return(Argument_List)
  } 
 }
