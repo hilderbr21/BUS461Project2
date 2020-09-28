@@ -22,8 +22,8 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
   
   #order a in numerical order and order w in the same order
   newOrder<-order(a)
-  newW<-w[match(newOrder,w)]
-  newA<-a[match(newOrder,a)]
+  newW<-w[newOrder]
+  newA<-a[newOrder]
   
   print(newA)
   print(newW)
@@ -33,9 +33,9 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
   aCoord<-newA[i]
   
   #repeat above for b
-  newB<-order(b)
-  # newA<-a[match(b,a)]
-  # newW<-w[match(b,w)]
+  newOrder<-order(b)
+  newW<-w[newOrder]
+  newB<-b[newOrder]
   
   for(i in newB)
     if(newB[i] >= sumWeight/2)
@@ -50,4 +50,5 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
   return(c(aCoord, bCoord, TotalCost))
   
 }
-  
+
+
