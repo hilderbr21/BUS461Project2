@@ -22,9 +22,9 @@ test.SFRDVvalid<- function(){
   
   #check with correct answer
   #default epsilon
-  #checkEquals(c(6,8,1175),SFRDV(a,b,w))
+  checkEquals(c(6,8,1175),SFRDV(a,b,w))
   #modified epsilon
-  #checkEquals(c(6,8,1175),SFRDV(a,b,w,epsilon=0.001))
+  checkEquals(c(6,8,1175),SFRDV(a,b,w,epsilon=0.001))
 }
 
 test.SFRDVinvalid<- function(){
