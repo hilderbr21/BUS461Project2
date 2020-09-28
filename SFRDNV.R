@@ -15,37 +15,41 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
       return( -1)
     }
   
-  print(a)
-  print(b)
-  print(w)
   sumWeight<- sum(w)
   
   #order a in numerical order and order w in the same order
   newOrder<-order(a)
   newW<-w[newOrder]
   newA<-a[newOrder]
+  sumA<-0
+  sumB<-0
   
-  print(newA)
-  print(newW)
-  for(i in newA)
-    if(newA[i] >= sumWeight/2)
+  for(i in 1:length(newA)){
+    sumA<- newW[i] + sumA
+    if(sumA >= sumWeight/2){
+      aCoord<-newA[i]
       break
-  aCoord<-newA[i]
+    }
+  }
   
   #repeat above for b
   newOrder<-order(b)
   newW<-w[newOrder]
   newB<-b[newOrder]
   
-  for(i in newB)
-    if(newB[i] >= sumWeight/2)
+  for(i in 1:length(newB)){
+    sumB<- newW[i] + sumB
+    if(sumB >= sumWeight/2){
+      bCoord<-newB[i]
       break
-  bCoord<-newB[i]
+    }
+  }
   
   TotalCost<-0
   
-  for(i in length(w))
+  for(i in 1:length(w)){
     TotalCost<- TotalCost + w[i] *(abs(aCoord-a[i]) + abs(bCoord-b[i]))
+  }
   
   return(c(aCoord, bCoord, TotalCost))
   
