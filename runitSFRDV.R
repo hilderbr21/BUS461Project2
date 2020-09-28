@@ -22,23 +22,21 @@ test.SFRDVvalid<- function(){
   
   #check with correct answer
   #default epsilon
-  #checkEquals(c(6,8,1175),SFRDNV(a,b,w))
+  #checkEquals(c(6,8,1175),SFRDV(a,b,w))
   #modified epsilon
-  #checkEquals(c(6,8,1175),SFRDNV(a,b,w,epsilon=0.001))
+  #checkEquals(c(6,8,1175),SFRDV(a,b,w,epsilon=0.001))
 }
 
 test.SFRDVinvalid<- function(){
   
   #check for invalid arguments
   #1. invalid datatype
-  checkEquals(-1, SFRDNV("Gary Mitchell is the best professor!",b,w))
-  print("test 1 complete")
+  checkEquals(-1, SFRDV("Gary Mitchell is the best professor!",b,w))
   #2. inconsistent vector sizes
-  checkEquals(-1, SFRDNV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5)))
-  print("test 2 complete")
+  checkEquals(-1, SFRDV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5)))
   #3. negative number in one of the vectors
-  checkEquals(-1, SFRDNV(c(1,2,3,-4),c(1,2,3,4),c(1,2,3,4)))
+  checkEquals(-1, SFRDV(c(1,2,3,-4),c(1,2,3,4),c(1,2,3,4)))
   #4. negative scalar precision
-  checkEquals(-1, SFRDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5))
+  checkEquals(-1, SFRDV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5))
   
 }

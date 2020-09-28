@@ -1,4 +1,4 @@
-#Unit Test
+#Obsolete unit test file
 
 if (!suppressMessages(require(RUnit)))
 {

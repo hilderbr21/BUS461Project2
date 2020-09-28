@@ -1,3 +1,6 @@
+#SFRDNV (problem 1 no vector)
+#@author Marc Hilderbrand
+
 SFRDNV <- function(a,b,w,epsilon=0.01) {
   
   #validity check
@@ -12,11 +15,39 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
       return( -1)
   }
   
+  print(a)
+  print(b)
+  print(w)
+  sumWeight<- sum(w)
   
+  #order a in numerical order and order w in the same order
+  newOrder<-order(a)
+  newW<-w[match(newOrder,w)]
+  newA<-a[match(newOrder,a)]
   
+  print(newA)
+  print(newW)
+  for(i in newA)
+    if(newA[i] >= sumWeight/2)
+      break
+  aCoord<-newA[i]
   
+  #repeat above for b
+  newB<-order(b)
+  # newA<-a[match(b,a)]
+  # newW<-w[match(b,w)]
   
-  #sortingMatrix <- matrix(a,b,w, dimnames=c('a','b','w'))
-  #print(sortingMatrix)
+  for(i in newB)
+    if(newB[i] >= sumWeight/2)
+      break
+  bCoord<-newB[i]
+  
+  TotalCost<-0
+  
+  for(i in length(w))
+    TotalCost<- TotalCost + w[i] *(abs(aCoord-a[i]) + abs(bCoord-b[i]))
+  
+  return(c(aCoord, bCoord, TotalCost))
+  
 }
   
