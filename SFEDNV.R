@@ -1,9 +1,15 @@
 SFEDNV <- function(a,b,w,epsilon=0.01) {
-  if(!numeric(a) | !numeric(b) | !numeric(w)){ #Run a test to make sure values >=0
-    return -1;
+  
+  #validity check
+  if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")){
+    return(-1)
   }
-  if(a < 0  | b < 0 | w < 0 | epsilon < 0){
-    return(-1);
+  if(length(a) != length(b) | length(b) != length(w) | length(w) != length(a)){
+    return(-1)
+  }
+  for(i in 1:length(a))
+    if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0){
+      return( -1)
   }
   
 }
@@ -29,7 +35,7 @@ calcCentroid<-for(j in 2: i + 1){
 }
 
 # test for convergence  
-  if (abs(x[i] - x[i-1]) <= epsilion && abs(y[i] - y[i-1]) <= epsilion){
+  if (abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
     
 #if test passes, calculate Total Cost
     total_cost<-w*sqrt((abs(x-a) + abs(y-b)))
