@@ -1,4 +1,4 @@
-#Unit test suit
+#Unit test suite
 #@author Marc Hilderbrand
 
 require(RUnit)

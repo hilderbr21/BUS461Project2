@@ -1,7 +1,7 @@
-#SFRDNV (problem 1 no vector)
+#SFRDNV (problem 2 no vector)
 #@author Joe Crowley
 
-SFEDNV <- function(a,b,w,epsilon=0.01,interlim) {
+SFEDNV <- function(a,b,w,epsilon=0.01,iterlim) {
   
   #validity check
   if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")
@@ -12,8 +12,8 @@ SFEDNV <- function(a,b,w,epsilon=0.01,interlim) {
     return(-1)
   }
   for(i in 1:length(a))
-    if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0 | interlimit < 0){
-      return( -1)
+  if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0 | interlimit < 0){
+    return( -1)
   }
 
   # calculate x0 and y0 using calcCentroid 
@@ -26,7 +26,7 @@ SFEDNV <- function(a,b,w,epsilon=0.01,interlim) {
   i<-2
 
   # calculate revised coordinates
-  for(j in 2:(interlim + 1)){
+  for(j in 2:(iterlim + 1)){
     xNumerTemp<- xNumerTemp + (w[j]*a[j])
     xDenomTemp <- xDenomTemp + w[j]
     yNumerTemp <- yNumerTemp + (w[j]*b[j])
