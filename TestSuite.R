@@ -1,9 +1,10 @@
 #Unit test suite
 #
-#Source to run all unit test in console
+#Source to run all unit test in console. Include all files in same directory.
+#
+#This test suite runs all files starting with "runit" as unit tests.
 #
 #@author Marc Hilderbrand
-
 
 
 require(RUnit)
