@@ -1,18 +1,18 @@
 #SFRDNV (problem 2 no vector)
 #@author Joe Crowley
 
-SFEDNV <- function(a,b,w,epsilon=0.01,interlimit) {
+SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
   
   #validity check
   if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")
-     | !is.numeric(interlimit)){
+     | !is.numeric(iterlimit)){
     return(-1)
   }
   if(length(a) != length(b) | length(b) != length(w) | length(w) != length(a)){
     return(-1)
   }
   for(i in 1:length(a))
-    if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0 | interlimit < 0){
+    if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0 | iterlimit < 0){
       return( -1)
     }
  
@@ -24,10 +24,10 @@ SFEDNV <- function(a,b,w,epsilon=0.01,interlimit) {
   xDenomTemp<-0
   yNumerTemp<-0
   yDenomTemp<-0
-  i<-2
+  iterlimit<-2
 
   # calculate revised coordinates
-  for(j in 2:(iterlim + 1)){
+  for(j in 2:(iterlimit + 1)){
     xNumerTemp<- xNumerTemp + (w[j]*a[j])
     xDenomTemp <- xDenomTemp + w[j]
     yNumerTemp <- yNumerTemp + (w[j]*b[j])
@@ -39,8 +39,8 @@ SFEDNV <- function(a,b,w,epsilon=0.01,interlimit) {
     if (abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
     
       #if test passes, calculate Total Cost
-      total_cost<-w*sqrt((abs(x-a) + abs(y-b)))
-      Argument_List<-list(x, y, total_cost )
+      TC<-w*sqrt((abs(x-a) + abs(y-b)))
+      Argument_List<-list(x, y, TC )
       return(Argument_List)
     }
   }

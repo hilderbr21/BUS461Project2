@@ -24,19 +24,19 @@ iterations<-14
 test.SFEDNVvalid<- function(){
   #check with correct answer
   #default epsilon
-  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,w,interlimit))
+  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,w,iterlimit))
   #modified epsilon
-  checkEquals(c(x,y,TC,FALSE,14),SFEDNV(a,b,w,epsilon=0.001,interlimit))
+  checkEquals(c(x,y,TC,FALSE,14),SFEDNV(a,b,w,epsilon=0.001,iterlimit))
 }
   
 test.SFEDNVinvalid<- function(){
   #check for invalid arguments
   #1. invalid datatype
-  checkEquals(-1, SFEDNV("Please have mercy on our grades Dr. Mitchell.", y,w,iterlimit))
+  checkEquals(-1, SFEDNV("Please have mercy on our grades Dr. Mitchell.", b,w,iterlimit))
   #2. inconsistent vector sizes
-  checkEquals(-1, SFEDNV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5)))
+  checkEquals(-1, SFEDNV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5),iterlimit))
   #3. negative number in one of the vectors
-  checkEquals(-1, SFEDNV(c(1,2,3,-4),c(1,2,3,4),c(1,2,3,4)))
+  checkEquals(-1, SFEDNV(c(1,2,3,-4),c(1,2,3,4),c(1,2,3,4), iterlimit))
   #4. negative scalar precision
-  checkEquals(-1, SFEDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5))
+  checkEquals(-1, SFEDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5, iterlimit))
 }
