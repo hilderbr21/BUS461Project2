@@ -1,5 +1,10 @@
 #Unit test suite
+#
+#Source to run all unit test in console
+#
 #@author Marc Hilderbrand
+
+
 
 require(RUnit)
 
