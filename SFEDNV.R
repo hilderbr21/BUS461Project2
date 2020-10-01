@@ -1,4 +1,4 @@
-#SFRDNV (problem 2 no vector)
+#SFEDNV (problem 2 no vector)
 #@author Joe Crowley
 
 SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
@@ -24,26 +24,25 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
   xDenomTemp<-0
   yNumerTemp<-0
   yDenomTemp<-0
-  iterlimit<-2
 
   # calculate revised coordinates
   for(j in 2:(iterlimit + 1)){
-    xNumerTemp<- xNumerTemp + (w[j]*a[j])
-    xDenomTemp <- xDenomTemp + w[j]
-    yNumerTemp <- yNumerTemp + (w[j]*b[j])
-    yDenomTemp <- yDenomTemp + w[j]
+   xNumerTemp<- xNumerTemp + (w[j]*a[j])
+   xDenomTemp <- xDenomTemp + w[j]
+   yNumerTemp <- yNumerTemp + (w[j]*b[j])
+   yDenomTemp <- yDenomTemp + w[j]
    x[j] <-xNumerTemp/xDenomTemp
    y[j] <-yNumerTemp/yDenomTemp
+   iterations <- j-1
 
     # test for convergence  
     if (abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
     
-      #if test passes, calculate Total Cost
-      TC<-w*sqrt((abs(x-a) + abs(y-b)))
-      Argument_List<-list(x, y, TC )
-      return(Argument_List)
+    #if test passes, calculate Total Cost
+    TC<-w*sqrt((abs(x-a) + abs(y-b)))
     }
   }
-  return(-1)
+  print(list(x, y, TC, convergance, iterations))
+  return(list(x, y, TC, convergance, iterations))
 }
 
