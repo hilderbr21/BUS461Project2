@@ -1,3 +1,8 @@
+"""
+Unit Test for B1Policy
+
+@author Marc Hilderbrand
+"""
 if (!suppressMessages(require(RUnit)))
 {
   stop("Terminating... required package RUnit is not installed.")
@@ -6,25 +11,34 @@ if (!suppressMessages(require(RUnit)))
 source("B1Policy.R")
 
 #starting values -=DUMMY VALUES=-
-D<-0#annual unit demand
-A<-0#aggregate order placement cost
-v<-0#unit aquisition cost
-r<-0#annual holding cost percentage rate
-B1<-0#shortage cost per stockout occasion
-xl<-0#expected demand
-sl<-0#demand standard deviation (review time +) lead time
-epsilon<-0#desired level of confidence(i.e. maxiumum difference between iterations)
-          #defaul 0.01
+D<-700#annual unit demand
+A<-3.20#aggregate order placement cost
+v<-12#unit aquisition cost
+r<-0.24#annual holding cost percentage rate
+B1<-32#shortage cost per stockout occasion
+xl<-100#expected demand
+sl<-30#demand standard deviation (review time +) lead time
+epsilon<-0.001#desired level of confidence(i.e. maxiumum difference between iterations)
+          #default 0.01
 iterlimit<-0#maximum number of iterations, default 0.01
 kmin<-0#minumum acceptable safety factor, default 0
 
+
+
+
 #return list -=DUMMY VALUES=-
+#answer
+
+tempk = c(9999,1.389,1.152,1.058,1.016,0.996,0.987,0.983,0.981,0.980,rep(0.979,11))
+tempQ = 0
+
 answer<-list(policy = list(s = "order point",
                            k = "safety factor",
                            Q = "order quantity"),
              TRC = "Total Relevent cost",
              converged = "TRUE/FALSE",
-             iterations = data.frame(s = (1:2),
+             iterations = data.frame(iteration = (1:20),
+                                     s = (1:2),
                                      Q = (1:2),
                                      k = (1:2),
                                      TRC = (1:2),
