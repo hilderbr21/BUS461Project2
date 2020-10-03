@@ -35,14 +35,15 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
    y[j] <-yNumerTemp/yDenomTemp
    iterations <- j-1
 
-    # test for convergence  
-    if (abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
-    
-    #if test passes, calculate Total Cost
-    TC<-w*sqrt((abs(x-a) + abs(y-b)))
-    }
+  # test for convergence  
+  if(abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
+  TC<-w*sqrt((abs(x-a) + abs(y-b)))
+  } else {
+  return(-1)
   }
-  print(list(x, y, TC, convergance, iterations))
-  return(list(x, y, TC, convergance, iterations))
-}
+   print(list(x, y, TC, convergance, iterations))
+   return(list(x, y, TC, convergance, iterations))
+  }
+  
+} 
 
