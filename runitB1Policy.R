@@ -1,8 +1,9 @@
-"""
-Unit Test for B1Policy
+#Unit Test for B1Policy
+#
+#@author Marc Hilderbrand
+#
+library(comprehenr)
 
-@author Marc Hilderbrand
-"""
 if (!suppressMessages(require(RUnit)))
 {
   stop("Terminating... required package RUnit is not installed.")
@@ -30,8 +31,10 @@ kmin<-0#minumum acceptable safety factor, default 0
 #answer
 
 tempk = c(9999,1.389,1.152,1.058,1.016,0.996,0.987,0.983,0.981,0.980,rep(0.979,11))
-tempQ = 0
-
+tempQ = c(39.441,53.278,59.121,61.748,62.967,63.542,63.815,63.945,64.008,64.037,64.052,
+          64.058,64.062,64.063,64.064,64.064,64.064,rep(64.065,4))
+tempQdif = to_vec(for(i in 2:tempQ) sum(tempQ[i] - tempQ[i-1]))
+print(tempQdif)
 answer<-list(policy = list(s = "order point",
                            k = "safety factor",
                            Q = "order quantity"),
