@@ -27,22 +27,24 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
 
   # calculate revised coordinates
   for(j in 2:(iterlimit + 1)){
-   xNumerTemp<- xNumerTemp + (w[j]*a[j])
-   xDenomTemp <- xDenomTemp + w[j]
-   yNumerTemp <- yNumerTemp + (w[j]*b[j])
-   yDenomTemp <- yDenomTemp + w[j]
-   x[j] <-xNumerTemp/xDenomTemp
-   y[j] <-yNumerTemp/yDenomTemp
-   iterations <- j-1
+    xNumerTemp<- xNumerTemp + (w[j]*a[j])
+    xDenomTemp <- xDenomTemp + w[j]
+    yNumerTemp <- yNumerTemp + (w[j]*b[j])
+    yDenomTemp <- yDenomTemp + w[j]
+    x[j] <-xNumerTemp/xDenomTemp
+    y[j] <-yNumerTemp/yDenomTemp
+    iterations <- j-1
 
-  # test for convergence  
-  if(abs(x[i] - x[i-1]) <= epsilon && abs(y[i] - y[i-1]) <= epsilon){
-  TC<-w*sqrt((abs(x-a) + abs(y-b)))
-  } else {
-  return(-1)
-  }
-   print(list(x, y, TC, convergance, iterations))
-   return(list(x, y, TC, convergance, iterations))
+   # test for convergence  
+    
+    if(abs((x[j] - x[j-1])) <= epsilon) 
+      if((y[j] - y[j-1]) <= epsilon){
+  
+        TC<-w*sqrt((abs(x-a) + abs(y-b)))
+      } else {
+        return(-1)
+      }
+    return(c(x, y, TC, convergance, iterations))
   }
   
 } 

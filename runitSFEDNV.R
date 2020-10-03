@@ -40,6 +40,6 @@ test.SFEDNVinvalid<- function(){
   #4. negative scalar precision
   checkEquals(-1, SFEDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5,iterlimit=iterlimit))
   #5. negative iterlimit
-  checkEquals(-1, iterlimit < 0)
+  checkEquals(-1, SFEDNV(c(iterlimit=-4)))
 }
 
