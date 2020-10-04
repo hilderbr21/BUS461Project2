@@ -24,7 +24,7 @@ iterations<-14
 test.SFEDNVvalid<- function(){
   #check with correct answer
   #default epsilon
-  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,w,iterlimit=iterlimit))
+  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,TC,iterlimit=iterlimit))
   #modified epsilon
   checkEquals(c(x,y,TC,FALSE,14),SFEDNV(a,b,w,epsilon=0.001,iterlimit=iterlimit))
 }
@@ -40,6 +40,6 @@ test.SFEDNVinvalid<- function(){
   #4. negative scalar precision
   checkEquals(-1, SFEDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4),-0.5,iterlimit=iterlimit))
   #5. negative iterlimit
-  checkEquals(-1, SFEDNV(c(iterlimit=-4)))
+  checkEquals(-1, SFEDNV(c(1,2,3,4),c(1,2,3,4),c(1,2,3,4), iterlimit=-4))
 }
 
