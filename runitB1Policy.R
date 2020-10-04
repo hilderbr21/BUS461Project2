@@ -29,25 +29,26 @@ kmin<-0#minumum acceptable safety factor, default 0
 
 #return list -=DUMMY VALUES=-
 #answer
-
 tempk = c(9999,1.389,1.152,1.058,1.016,0.996,0.987,0.983,0.981,0.980,rep(0.979,11))
 tempQ = c(39.441,53.278,59.121,61.748,62.967,63.542,63.815,63.945,64.008,64.037,64.052,
           64.058,64.062,64.063,64.064,64.064,64.064,rep(64.065,4))
-tempQdif = to_vec(for(i in 2:tempQ) sum(tempQ[i] - tempQ[i-1]))
-print(tempQdif)
+tempQdif = c(NA,to_vec(for(i in 2:length(tempQ)) sum(tempQ[i] - tempQ[i-1])))
+temps = c(NA,to_vec(for(i in 2:length(tempk)) (xl+tempk[i]*sl)))
+tempkdif = c(NA,to_vec(for(i in 2:length(tempk)) sum(tempk[i] - tempk[i-1])))
+#tempTRC = 
 answer<-list(policy = list(s = "order point",
                            k = "safety factor",
                            Q = "order quantity"),
              TRC = "Total Relevent cost",
              converged = "TRUE/FALSE",
-             iterations = data.frame(iteration = (1:20),
-                                     s = (1:2),
-                                     Q = (1:2),
-                                     k = (1:2),
-                                     TRC = (1:2),
-                                     Qdiff = (1:2),
-                                     kdiff = (1:2)))
-
+             iterations = data.frame(iteration = (1:21),
+                                     s = (temps),
+                                     Q = (tempQ),
+                                     k = (tempk),
+                                     TRC = (1:21),
+                                     Qdiff = (1:21),
+                                     kdiff = (1:21)))
+print(answer)
 test.B1Policyvalid<- function(){
   #check with correct answer
   #default epsilon
