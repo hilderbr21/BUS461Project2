@@ -24,7 +24,7 @@ iterations<-14
 test.SFEDNVvalid<- function(){
   #check with correct answer
   #default epsilon
-  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,TC,iterlimit=iterlimit))
+  checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,w,epsilon= 0.01, iterlimit=iterlimit))
   #modified epsilon
   checkEquals(c(x,y,TC,FALSE,14),SFEDNV(a,b,w,epsilon=0.001,iterlimit=iterlimit))
 }

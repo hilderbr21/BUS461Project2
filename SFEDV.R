@@ -24,7 +24,8 @@ SFEDV <- function(a,b,w,epsilon=0.01,iterlimit) {
   xDenomTemp<-0
   yNumerTemp<-0
   yDenomTemp<-0
-  
+ 
+  #***Changed from SFEDNV*** 
   # calculate revised coordinates
   for(j in 2:(iterlimit + 1)){
     xNumerTemp<- xNumerTemp + (w[j]*a[j])
