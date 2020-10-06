@@ -1,0 +1,310 @@
+
+
+Executing test function test.SFRDVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFRDVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFRDVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFRDVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.SFRDNVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFRDNVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFRDNVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFRDNVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample3  ...  done successfully.
+
+
+
+Executing test function test.SFEDVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFEDVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample3  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyExample1  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyRandomExamples  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyValidLengths  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyValidNumerics  ...  done successfully.
+
+RUNIT TEST PROTOCOL -- Mon Oct 05 21:56:15 2020 
+*********************************************** 
+Number of test functions: 4 
+Number of errors: 2 
+Number of failures: 1 
+
+ 
+1 Test Suite : 
+runitSFRDVUnitTests - 4 test functions, 2 errors, 1 failure
+ERROR in test.SFRDVExample1: Error in actual$x : $ operator is invalid for atomic vectors
+ERROR in test.SFRDVExample2: Error in actual$x : $ operator is invalid for atomic vectors
+FAILURE in test.SFRDVValidNumerics: Error in checkEquals(-1, SFRDV(a, b, w, "0.001")) : 
+  Numeric: lengths (1, 3) differ
+
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFRDVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFRDVUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitSFRDVUnitTests.R 
+test.SFRDVExample1: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFRDVExample2: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDVValidNumerics: FAILURE !! (check number 4)
+Error in checkEquals(-1, SFRDV(a, b, w, "0.001")) : 
+  Numeric: lengths (1, 3) differ
+
+RUNIT TEST PROTOCOL -- Mon Oct 05 21:56:15 2020 
+*********************************************** 
+Number of test functions: 4 
+Number of errors: 2 
+Number of failures: 1 
+
+ 
+1 Test Suite : 
+runitSFRDNVUnitTests - 4 test functions, 2 errors, 1 failure
+ERROR in test.SFRDNVExample1: Error in actual$x : $ operator is invalid for atomic vectors
+ERROR in test.SFRDNVExample2: Error in actual$x : $ operator is invalid for atomic vectors
+FAILURE in test.SFRDNVValidNumerics: Error in checkEquals(-1, SFRDNV(a, b, w, "0.001")) : 
+  Numeric: lengths (1, 3) differ
+
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFRDNVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFRDNVUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitSFRDNVUnitTests.R 
+test.SFRDNVExample1: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFRDNVExample2: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFRDNVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDNVValidNumerics: FAILURE !! (check number 4)
+Error in checkEquals(-1, SFRDNV(a, b, w, "0.001")) : 
+  Numeric: lengths (1, 3) differ
+
+RUNIT TEST PROTOCOL -- Mon Oct 05 21:56:15 2020 
+*********************************************** 
+Number of test functions: 5 
+Number of errors: 5 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+runitSFEDVUnitTests - 5 test functions, 5 errors, 0 failures
+ERROR in test.SFEDVExample1: Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVExample2: Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVExample3: Error in actual$x : $ operator is invalid for atomic vectors
+ERROR in test.SFEDVValidLengths: Error in SFEDV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVValidNumerics: Error in SFEDV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFEDVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFEDVUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitSFEDVUnitTests.R 
+test.SFEDVExample1: ERROR !! 
+Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVExample2: ERROR !! 
+Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVExample3: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFEDVValidLengths: ERROR !! 
+Error in SFEDV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVValidNumerics: ERROR !! 
+Error in SFEDV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+RUNIT TEST PROTOCOL -- Mon Oct 05 21:56:15 2020 
+*********************************************** 
+Number of test functions: 5 
+Number of errors: 5 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+runitSFEDNVUnitTests - 5 test functions, 5 errors, 0 failures
+ERROR in test.SFEDNVExample1: Error in SFEDNV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDNVExample2: Error in SFEDNV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDNVExample3: Error in actual$x : $ operator is invalid for atomic vectors
+ERROR in test.SFEDNVValidLengths: Error in SFEDNV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDNVValidNumerics: Error in SFEDNV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFEDNVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFEDNVUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitSFEDNVUnitTests.R 
+test.SFEDNVExample1: ERROR !! 
+Error in SFEDNV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDNVExample2: ERROR !! 
+Error in SFEDNV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDNVExample3: ERROR !! 
+Error in actual$x : $ operator is invalid for atomic vectors
+test.SFEDNVValidLengths: ERROR !! 
+Error in SFEDNV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDNVValidNumerics: ERROR !! 
+Error in SFEDNV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+RUNIT TEST PROTOCOL -- Mon Oct 05 21:56:15 2020 
+*********************************************** 
+Number of test functions: 4 
+Number of errors: 4 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+runitB1PolicyUnitTests - 4 test functions, 4 errors, 0 failures
+ERROR in test.B1PolicyExample1: Error in B1Policy(D, A, v, r, B1, xl, sl) : unused arguments (B1, xl, sl)
+ERROR in test.B1PolicyRandomExamples: Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+ERROR in test.B1PolicyValidLengths: Error in B1Policy(multi, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
+  unused arguments (B1, xl, sl, epsilon, iterlimit, kmin)
+ERROR in test.B1PolicyValidNumerics: Error in B1Policy(nonnum, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
+  unused arguments (B1, xl, sl, epsilon, iterlimit, kmin)
+
+
+
+Details 
+*************************** 
+Test Suite: runitB1PolicyUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitB1PolicyUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitB1PolicyUnitTests.R 
+test.B1PolicyExample1: ERROR !! 
+Error in B1Policy(D, A, v, r, B1, xl, sl) : unused arguments (B1, xl, sl)
+test.B1PolicyRandomExamples: ERROR !! 
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+test.B1PolicyValidLengths: ERROR !! 
+Error in B1Policy(multi, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
+  unused arguments (B1, xl, sl, epsilon, iterlimit, kmin)
+test.B1PolicyValidNumerics: ERROR !! 
+Error in B1Policy(nonnum, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
+  unused arguments (B1, xl, sl, epsilon, iterlimit, kmin)
+
+
+Test Results by class:
+
+   Class/Function               Test.Function Checks Test.Result Elapsed.Time
+1           SFRDV          test.SFRDVExample1      0       error          Inf
+2           SFRDV          test.SFRDVExample2      0       error          Inf
+3           SFRDV      test.SFRDVValidLengths      3     success            0
+4           SFRDV     test.SFRDVValidNumerics      0     failure          Inf
+5          SFRDNV         test.SFRDNVExample1      0       error          Inf
+6          SFRDNV         test.SFRDNVExample2      0       error          Inf
+7          SFRDNV     test.SFRDNVValidLengths      3     success            0
+8          SFRDNV    test.SFRDNVValidNumerics      0     failure          Inf
+9           SFEDV          test.SFEDVExample1      0       error          Inf
+10          SFEDV          test.SFEDVExample2      0       error          Inf
+11          SFEDV          test.SFEDVExample3      0       error          Inf
+12          SFEDV      test.SFEDVValidLengths      0       error          Inf
+13          SFEDV     test.SFEDVValidNumerics      0       error          Inf
+14         SFEDNV         test.SFEDNVExample1      0       error          Inf
+15         SFEDNV         test.SFEDNVExample2      0       error          Inf
+16         SFEDNV         test.SFEDNVExample3      0       error          Inf
+17         SFEDNV     test.SFEDNVValidLengths      0       error          Inf
+18         SFEDNV    test.SFEDNVValidNumerics      0       error          Inf
+19       B1Policy       test.B1PolicyExample1      0       error          Inf
+20       B1Policy test.B1PolicyRandomExamples      0       error          Inf
+21       B1Policy   test.B1PolicyValidLengths      0       error          Inf
+22       B1Policy  test.B1PolicyValidNumerics      0       error          Inf
