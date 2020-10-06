@@ -52,7 +52,7 @@ answer<-list(policy = list("s - order point" = s,
                                      TRC = (tempTRC),
                                      Qdiff = (tempQdif),
                                      kdiff = (tempkdif)))
-print(answer)
+#print(answer)
 test.B1Policyvalid<- function(){
   #check with correct answer
   #default epsilon
