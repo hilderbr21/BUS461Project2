@@ -38,7 +38,7 @@ SFEDV <- function(a,b,w,epsilon=0.01,iterlimit) {
     
     # test for convergence  
     
-    Total_Cost<-ifelse(abs((x[j] - x[j-1])) <= epsilon) 
+    if(abs((x[j] - x[j-1])) <= epsilon) 
       if((y[j] - y[j-1]) <= epsilon){
         
         TC<-w*sqrt((abs(x-a) + abs(y-b)))
