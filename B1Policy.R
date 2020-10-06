@@ -13,6 +13,6 @@ B1Policy <- function(D,A,v,r) {
     }
   }
   
-  
+  Q[1] <= sqrt(2(D*A)/(V*R))
   
 }

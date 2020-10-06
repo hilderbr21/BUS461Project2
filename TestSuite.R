@@ -13,7 +13,7 @@ require(RUnit)
 # define the test suite
 testsuite.AllTests<-defineTestSuite("AllTests",
                                dirs = getwd(),
-                               testFileRegexp = "^runit*.+\\.R",
+                               testFileRegexp = "^xrunit*.+\\.R",
                                testFuncRegexp = "test.+"
 )
 
