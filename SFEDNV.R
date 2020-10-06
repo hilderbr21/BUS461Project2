@@ -46,6 +46,6 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
       }
     return(c(x, y, TC, convergance, iterations))
   }
-  
+
 } 
 
