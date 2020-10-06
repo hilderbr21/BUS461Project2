@@ -32,7 +32,7 @@ test.SFEDVvalid<- function(){
 test.SFEDVinvalid<- function(){
   #check for invalid arguments
   #1. invalid datatype
-  checkEquals(-1, SFEDV("This is a test.", b,w,iterlimit=iterlimit))
+  checkEquals(-1, SFEDV("This is a test.",b,w,epsilon=0.01,iterlimit))
   #2. inconsistent vector sizes
   checkEquals(-1, SFEDV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5),iterlimit=iterlimit))
   #3. negative number in one of the vectors

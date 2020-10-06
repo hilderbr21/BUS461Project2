@@ -12,7 +12,7 @@ SFEDV <- function(a,b,w,epsilon=0.01,iterlimit) {
     return(-1)
   }
   for(i in 1:length(a))
-    if(a[i] < 0 | b[i] < 0 | w[i] < 0 | epsilon < 0 | iterlimit < 0){
+    if(a[i] <= 0 | b[i] <= 0 | w[i] <= 0 | epsilon <= 0 | iterlimit <= 0){
       return( -1)
     }
   
@@ -27,7 +27,7 @@ SFEDV <- function(a,b,w,epsilon=0.01,iterlimit) {
  
   #***Changed from SFEDNV*** 
   # calculate revised coordinates
-  for(j in 2:(iterlimit + 1)){
+  for(j in length(w)){
     xNumerTemp<- xNumerTemp + (w[j]*a[j])
     xDenomTemp <- xDenomTemp + w[j]
     yNumerTemp <- yNumerTemp + (w[j]*b[j])
@@ -38,7 +38,7 @@ SFEDV <- function(a,b,w,epsilon=0.01,iterlimit) {
     
     # test for convergence  
     
-    if(abs((x[j] - x[j-1])) <= epsilon) 
+    Total_Cost<-ifelse(abs((x[j] - x[j-1])) <= epsilon) 
       if((y[j] - y[j-1]) <= epsilon){
         
         TC<-w*sqrt((abs(x-a) + abs(y-b)))
