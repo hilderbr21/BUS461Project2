@@ -51,6 +51,6 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
     TotalCost<- TotalCost + w[i] *(abs(aCoord-a[i]) + abs(bCoord-b[i]))
   }
 
-  return(c(aCoord, bCoord, TotalCost))
+  return(list(aCoord, bCoord, TotalCost))
 
 }
