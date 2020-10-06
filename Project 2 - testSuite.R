@@ -4,7 +4,6 @@
 
 rm(list=ls())
 
-
 # set current directory as source directory
 script.dir<-getSrcDirectory(function(){})
 setwd(script.dir)
@@ -78,7 +77,6 @@ sink(file=capturename)
 
 
 testResults<-list()
-
 testResults[[length(testResults)+1]]<-runTestFile("runitSFRDVUnitTests.R", rngKind = "default", rngNormalKind = "default")
 testResults[[length(testResults)+1]]<-runTestFile("runitSFRDNVUnitTests.R", rngKind = "default", rngNormalKind = "default")
 testResults[[length(testResults)+1]]<-runTestFile("runitSFEDVUnitTests.R", rngKind = "default", rngNormalKind = "default")

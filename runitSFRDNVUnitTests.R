@@ -9,7 +9,6 @@ source("SFRDNV.R")
 test.SFRDNVValidLengths<-function()
 {
   dat<-read.csv("example1_esf.csv")
-  
   a<-dat$a
   b<-dat$b
   w<-dat$w

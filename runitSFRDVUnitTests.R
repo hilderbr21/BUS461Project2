@@ -58,7 +58,6 @@ test.SFRDVExample1<-function()
   
   expected<-VERIFYRectilinearMinisum(a, b, w)
   actual<-SFRDV(a, b, w)
-  
   checkEquals(expected$x, actual$x)
   checkEquals(expected$y, actual$y)
   
@@ -103,6 +102,8 @@ test.SFRDVExample2<-function()
   names(expvec)<-NULL
   actvec<-unlist(actual)
   names(actvec)<-NULL
+  
+  print("Test")
   
   compare<-data.frame(expvec, actvec)
   colnames(compare)<-c("Expected", "Actual")

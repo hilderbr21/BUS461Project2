@@ -4,7 +4,8 @@
 SFRDNV <- function(a,b,w,epsilon=0.01) {
   
   #validity check
-  if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")){
+  if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")
+      | !is.vector(epsilon, mode="numeric")){
     return(-1)
   }
   if(length(a) != length(b) | length(b) != length(w) | length(w) != length(a)){
@@ -51,6 +52,6 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
     TotalCost<- TotalCost + w[i] *(abs(aCoord-a[i]) + abs(bCoord-b[i]))
   }
 
-  return(list(aCoord, bCoord, TotalCost))
-
+  return(data.frame("x" = aCoord, "y" = bCoord, "total_cost" = TotalCost))
+  #return(c(aCoord,bCoord,TotalCost))
 }
