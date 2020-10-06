@@ -26,13 +26,13 @@ test.SFEDNVvalid<- function(){
   #default epsilon
   checkEquals(c(x,y,TC,convergance,iterations),SFEDNV(a,b,w,epsilon= 0.01, iterlimit=iterlimit))
   #modified epsilon
-  checkEquals(c(x,y,TC,FALSE,14),SFEDNV(a,b,w,epsilon=0.001,iterlimit=iterlimit))
+  checkEquals(c(x,y,TC,FALSE,14), SFEDNV(a,b,w,epsilon=0.001,iterlimit=iterlimit))
 }
   
 test.SFEDNVinvalid<- function(){
   #check for invalid arguments
   #1. invalid datatype
-  checkEquals(-1, SFEDNV("This is a test.", b,w,iterlimit=iterlimit))
+  checkEquals(-1, SFEDNV(a,"This is a test",w,epsilon,iterlimit=iterlimit))
   #2. inconsistent vector sizes
   checkEquals(-1, SFEDNV(c(1,2,3,4,5,6),c(1,2,4,5),c(1,2,3,4,5),iterlimit=iterlimit))
   #3. negative number in one of the vectors

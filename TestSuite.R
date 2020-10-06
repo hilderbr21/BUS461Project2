@@ -9,7 +9,7 @@
 
 require(RUnit)
 
-#TEST SUITE FOR SFRDNV
+#TEST SUITE 
 # define the test suite
 testsuite.AllTests<-defineTestSuite("AllTests",
                                dirs = getwd(),
