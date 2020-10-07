@@ -345,7 +345,11 @@ Executing test function test.B1PolicyValidLengths  ...  done successfully.
 
 Executing test function test.B1PolicyValidNumerics  ...  done successfully.
 
+<<<<<<< Updated upstream
 RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
+=======
+RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
+>>>>>>> Stashed changes
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -366,11 +370,19 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDVUnitTests.R 
+<<<<<<< Updated upstream
 test.SFRDVExample1: (3 checks) ... OK (0.03 seconds)
 test.SFRDVExample2: (15 checks) ... OK (0.03 seconds)
 test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
 test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
 RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
+=======
+test.SFRDVExample1: (3 checks) ... OK (0.31 seconds)
+test.SFRDVExample2: (15 checks) ... OK (0.07 seconds)
+test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
+RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
+>>>>>>> Stashed changes
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -393,9 +405,13 @@ Involved directory:
 Test file: ./runitSFRDNVUnitTests.R 
 test.SFRDNVExample1: (3 checks) ... OK (0 seconds)
 test.SFRDNVExample2: (15 checks) ... OK (0.02 seconds)
-test.SFRDNVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDNVValidLengths: (3 checks) ... OK (0.01 seconds)
 test.SFRDNVValidNumerics: (4 checks) ... OK (0 seconds)
+<<<<<<< Updated upstream
 RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
+=======
+RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
+>>>>>>> Stashed changes
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 5 
@@ -441,7 +457,11 @@ Error in SFEDV(0, b, w) :
 test.SFEDVValidNumerics: ERROR !! 
 Error in SFEDV(nonnum, b, w) : 
   argument "iterlimit" is missing, with no default
+<<<<<<< Updated upstream
 RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
+=======
+RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
+>>>>>>> Stashed changes
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 0 
@@ -483,9 +503,15 @@ test.SFEDNVExample3: FAILURE !! (check number 1)
 Error in checkEquals(expected$x, actual$x) : 
   Numeric: lengths (1, 14) differ
 
+<<<<<<< Updated upstream
 test.SFEDNVValidLengths: (4 checks) ... OK (0.01 seconds)
 test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
 RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
+=======
+test.SFEDNVValidLengths: (4 checks) ... OK (0 seconds)
+test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
+RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
+>>>>>>> Stashed changes
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 4 
@@ -527,13 +553,18 @@ Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) :
 Test Results by class:
 
    Class/Function               Test.Function Checks Test.Result Elapsed.Time
+<<<<<<< Updated upstream
 1           SFRDV          test.SFRDVExample1      3     success         0.03
 2           SFRDV          test.SFRDVExample2     15     success         0.03
+=======
+1           SFRDV          test.SFRDVExample1      3     success         0.31
+2           SFRDV          test.SFRDVExample2     15     success         0.07
+>>>>>>> Stashed changes
 3           SFRDV      test.SFRDVValidLengths      3     success            0
 4           SFRDV     test.SFRDVValidNumerics      4     success            0
 5          SFRDNV         test.SFRDNVExample1      3     success            0
 6          SFRDNV         test.SFRDNVExample2     15     success         0.02
-7          SFRDNV     test.SFRDNVValidLengths      3     success            0
+7          SFRDNV     test.SFRDNVValidLengths      3     success         0.01
 8          SFRDNV    test.SFRDNVValidNumerics      4     success            0
 9           SFEDV          test.SFEDVExample1      0       error          Inf
 10          SFEDV          test.SFEDVExample2      0       error          Inf
@@ -543,7 +574,11 @@ Test Results by class:
 14         SFEDNV         test.SFEDNVExample1      0     failure          Inf
 15         SFEDNV         test.SFEDNVExample2      0     failure          Inf
 16         SFEDNV         test.SFEDNVExample3      0     failure          Inf
+<<<<<<< Updated upstream
 17         SFEDNV     test.SFEDNVValidLengths      4     success         0.01
+=======
+17         SFEDNV     test.SFEDNVValidLengths      4     success            0
+>>>>>>> Stashed changes
 18         SFEDNV    test.SFEDNVValidNumerics      4     success            0
 19       B1Policy       test.B1PolicyExample1      0       error          Inf
 20       B1Policy test.B1PolicyRandomExamples      0       error          Inf

@@ -12,7 +12,7 @@ B1Policy <- function(D,A,v,r,B1,xL,sigmaL,epsilon=0.001,kmin=100,iterlimit=0) {
       return(-1)
     }
   }
-  
+ # calculate the intital values  
   Q[1] <- sqrt(2(D*A)/(V*R))
   k[1] <- 9999
   Rprime <- (1/(2*sqrt(2*pi)))*(B1/A)*sigmaL*(Q[1]/sigmaL)^2
@@ -21,7 +21,7 @@ B1Policy <- function(D,A,v,r,B1,xL,sigmaL,epsilon=0.001,kmin=100,iterlimit=0) {
   Qdiff[1] <- NULL
   kdiff[1] <- NULL
   
-  
+  # begin first for loop calculating R
   for(i in 2:(iterlimit+1)){
     R <- 2*ln(Rprime/(Q[i-1]))
     if(R >= 0){
@@ -39,9 +39,18 @@ B1Policy <- function(D,A,v,r,B1,xL,sigmaL,epsilon=0.001,kmin=100,iterlimit=0) {
     #break for loop if converged
     if(Qdiff[i] <= sigmaL & kdiff[i] <= sigmaL){
       break
-    }
+    print(iterlimit)
+      }
   }
   
+  # trim vectors to remove unused iterations
+  tempQ[i] <- Q[]
+  temps[i] <- 
+  tempTRC[i] <- 
+  tempQdiff[i] <- 
+  tempkdif[i] <- 
+  for()
   
-  
+  #return(data.frame("s"=s[i], "k"=k[i], "Q"=Q[i], "TRC"=TRC[i], "kdiff"=kdiff[i], "Qdiff"=Qdiff[i])) 
+             
 }
