@@ -41,7 +41,6 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
 
    # test for convergence  
     
-<<<<<<< Updated upstream
     if(abs((x[j] - x[j-1])) <= epsilon)
       #if both if statements are true, then convergence has occured
       if((y[j] - y[j-1]) <= epsilon){
@@ -64,16 +63,4 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
   
   #PLEASE REMOVE THE @Joe COMMENTS AFTER YOU HAVE MADE THE PROPOSED CHANGES
 } 
-=======
-      #if test passes, calculate Total Cost
-      TC<-w*sqrt((abs(x-a) + abs(y-b)))
-      Argument_List<-list(x, y, TC )
-      return(Argument_List)
-    }
-   return(-1)
-  }
-
-}
->>>>>>> Stashed changes
-
 
