@@ -345,11 +345,7 @@ Executing test function test.B1PolicyValidLengths  ...  done successfully.
 
 Executing test function test.B1PolicyValidNumerics  ...  done successfully.
 
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:09:27 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -370,19 +366,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDVUnitTests.R 
-<<<<<<< Updated upstream
-test.SFRDVExample1: (3 checks) ... OK (0.03 seconds)
-test.SFRDVExample2: (15 checks) ... OK (0.03 seconds)
+test.SFRDVExample1: (3 checks) ... OK (0.88 seconds)
+test.SFRDVExample2: (15 checks) ... OK (0.23 seconds)
 test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
-test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-test.SFRDVExample1: (3 checks) ... OK (0.31 seconds)
-test.SFRDVExample2: (15 checks) ... OK (0.07 seconds)
-test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
-test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+test.SFRDVValidNumerics: (4 checks) ... OK (0.02 seconds)
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:09:27 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -403,15 +391,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDNVUnitTests.R 
-test.SFRDNVExample1: (3 checks) ... OK (0 seconds)
-test.SFRDNVExample2: (15 checks) ... OK (0.02 seconds)
-test.SFRDNVValidLengths: (3 checks) ... OK (0.01 seconds)
-test.SFRDNVValidNumerics: (4 checks) ... OK (0 seconds)
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+test.SFRDNVExample1: (3 checks) ... OK (0.01 seconds)
+test.SFRDNVExample2: (15 checks) ... OK (0.05 seconds)
+test.SFRDNVValidLengths: (3 checks) ... OK (0.03 seconds)
+test.SFRDNVValidNumerics: (4 checks) ... OK (0.02 seconds)
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:09:27 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 5 
@@ -457,11 +441,7 @@ Error in SFEDV(0, b, w) :
 test.SFEDVValidNumerics: ERROR !! 
 Error in SFEDV(nonnum, b, w) : 
   argument "iterlimit" is missing, with no default
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:09:27 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 0 
@@ -503,15 +483,9 @@ test.SFEDNVExample3: FAILURE !! (check number 1)
 Error in checkEquals(expected$x, actual$x) : 
   Numeric: lengths (1, 14) differ
 
-<<<<<<< Updated upstream
-test.SFEDNVValidLengths: (4 checks) ... OK (0.01 seconds)
-test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
 test.SFEDNVValidLengths: (4 checks) ... OK (0 seconds)
-test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+test.SFEDNVValidNumerics: (4 checks) ... OK (0.01 seconds)
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:09:27 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 4 
@@ -520,12 +494,11 @@ Number of failures: 0
  
 1 Test Suite : 
 runitB1PolicyUnitTests - 4 test functions, 4 errors, 0 failures
-ERROR in test.B1PolicyExample1: Error in B1Policy(D, A, v, r, B1, xl, sl) : object 'a' not found
+ERROR in test.B1PolicyExample1: Error in if (R >= 0) { : argument is of length zero
 ERROR in test.B1PolicyRandomExamples: Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
-ERROR in test.B1PolicyValidLengths: Error in B1Policy(multi, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
-  object 'a' not found
-ERROR in test.B1PolicyValidNumerics: Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) : 
-  object 'a' not found
+ERROR in test.B1PolicyValidLengths: Error in if (R >= 0) { : argument is of length zero
+ERROR in test.B1PolicyValidNumerics: Error in B1Policy(D, A, v, r, B1, xl, sl, nonnum, iterlimit, kmin) : 
+  object 'Qtrimmed' not found
 
 
 
@@ -539,33 +512,27 @@ Involved directory:
 --------------------------- 
 Test file: ./runitB1PolicyUnitTests.R 
 test.B1PolicyExample1: ERROR !! 
-Error in B1Policy(D, A, v, r, B1, xl, sl) : object 'a' not found
+Error in if (R >= 0) { : argument is of length zero
 test.B1PolicyRandomExamples: ERROR !! 
 Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
 test.B1PolicyValidLengths: ERROR !! 
-Error in B1Policy(multi, A, v, r, B1, xl, sl, epsilon, iterlimit, kmin) : 
-  object 'a' not found
+Error in if (R >= 0) { : argument is of length zero
 test.B1PolicyValidNumerics: ERROR !! 
-Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) : 
-  object 'a' not found
+Error in B1Policy(D, A, v, r, B1, xl, sl, nonnum, iterlimit, kmin) : 
+  object 'Qtrimmed' not found
 
 
 Test Results by class:
 
    Class/Function               Test.Function Checks Test.Result Elapsed.Time
-<<<<<<< Updated upstream
-1           SFRDV          test.SFRDVExample1      3     success         0.03
-2           SFRDV          test.SFRDVExample2     15     success         0.03
-=======
-1           SFRDV          test.SFRDVExample1      3     success         0.31
-2           SFRDV          test.SFRDVExample2     15     success         0.07
->>>>>>> Stashed changes
+1           SFRDV          test.SFRDVExample1      3     success         0.88
+2           SFRDV          test.SFRDVExample2     15     success         0.23
 3           SFRDV      test.SFRDVValidLengths      3     success            0
-4           SFRDV     test.SFRDVValidNumerics      4     success            0
-5          SFRDNV         test.SFRDNVExample1      3     success            0
-6          SFRDNV         test.SFRDNVExample2     15     success         0.02
-7          SFRDNV     test.SFRDNVValidLengths      3     success         0.01
-8          SFRDNV    test.SFRDNVValidNumerics      4     success            0
+4           SFRDV     test.SFRDVValidNumerics      4     success         0.02
+5          SFRDNV         test.SFRDNVExample1      3     success         0.01
+6          SFRDNV         test.SFRDNVExample2     15     success         0.05
+7          SFRDNV     test.SFRDNVValidLengths      3     success         0.03
+8          SFRDNV    test.SFRDNVValidNumerics      4     success         0.02
 9           SFEDV          test.SFEDVExample1      0       error          Inf
 10          SFEDV          test.SFEDVExample2      0       error          Inf
 11          SFEDV          test.SFEDVExample3      0       error          Inf
@@ -574,12 +541,8 @@ Test Results by class:
 14         SFEDNV         test.SFEDNVExample1      0     failure          Inf
 15         SFEDNV         test.SFEDNVExample2      0     failure          Inf
 16         SFEDNV         test.SFEDNVExample3      0     failure          Inf
-<<<<<<< Updated upstream
-17         SFEDNV     test.SFEDNVValidLengths      4     success         0.01
-=======
 17         SFEDNV     test.SFEDNVValidLengths      4     success            0
->>>>>>> Stashed changes
-18         SFEDNV    test.SFEDNVValidNumerics      4     success            0
+18         SFEDNV    test.SFEDNVValidNumerics      4     success         0.01
 19       B1Policy       test.B1PolicyExample1      0       error          Inf
 20       B1Policy test.B1PolicyRandomExamples      0       error          Inf
 21       B1Policy   test.B1PolicyValidLengths      0       error          Inf
