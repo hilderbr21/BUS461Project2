@@ -1,7 +1,6 @@
 #SFEDNV (problem 2 no vector)
 #@author Joe Crowley
 
-#PLEASE REMOVE THE @Joe COMMENTS AFTER YOU HAVE MADE THE PROPOSED CHANGES
 
 SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   
@@ -17,9 +16,13 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   for(i in 1:length(a))
     if(a[i] <= 0 | b[i] <= 0 | w[i] <= 0 | epsilon <= 0 | iterlimit <= 0){
       return(-1)
+    }
+  
+  #fixes error in attempting to converge past available values
+  if(iterlimit > length(a)){
+    iterlimit <- length(a)
   }
- 
-   
+  
   # calculate x0 and y0 using calcCentroid 
   x <- c(sum(w[1]*a[1])/sum(w[1]))
   y <- c(sum(w[1]*b[1])/sum(w[1]))
@@ -27,10 +30,9 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   xDenomTemp<-0
   yNumerTemp<-0
   yDenomTemp<-0
-
-  print(x)
+  
   # calculate revised coordinates
-  for(j in 2:(length(iterlimit) + 1)){
+  for(j in 2:iterlimit){
     xNumerTemp<- xNumerTemp + (w[j]*a[j])
     xDenomTemp <- xDenomTemp + w[j]
     yNumerTemp <- yNumerTemp + (w[j]*b[j])
@@ -38,23 +40,32 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
     x[j] <-xNumerTemp/xDenomTemp
     y[j] <- yNumerTemp/yDenomTemp
     iterations <- j-1
-    print("iteration ")
-    print(x)
     # test for convergence
-    if(abs(x[j] - x[j-1]) <= epsilon){
-      #if both if statements are true, then convergence has occurred
-      if(abs(y[j] - y[j-1]) <= epsilon){
-        convergance <- TRUE
-        TC<-w*sqrt((abs(x[j]-a) + abs(y[j]-b)))
-        #convergence has occurred, return x, y, and Total Cost.
-        return(data.frame("x"=x[j], "y"=y[j], "Total Cost"=TC))
-      }
+    print("iterlimit")
+    
+    if(abs(x[j] - x[j-1]) <= epsilon | abs(y[j] - y[j-1]) <= epsilon){
+      print("true!!!!!!!!!!!!")
+      convergance <- TRUE
+      TC<-w*sqrt((abs(x[j]-a[j]) + abs(y[j]-b[j])))
+      #convergence has occurred, return x, y, and Total Cost.
+      
+      dfx <- x[j]
+      dfy <- y[j]
+      df <- data.frame("x"=dfx, "y"=dfy, "Total Cost"=TC)
+      print(df)
+      return(df)
     }
   } 
 
   #reached end of iterations, return total iterations
-  TC<-w*sqrt((abs(x[iterlimit]-a) + abs(y[iterlimit]-b)))
-  Argument_List<-data.frame("x"=x[iterlimit], "y"=y[iterlimit], "Total Cost"=TC)
+  newa <- a[iterlimit]
+  newb <- b[iterlimit]
+  newx <- x[iterlimit]
+  newy <- y[iterlimit]
+  TC<-w*sqrt((abs(newx-newa) + abs(newy-newb)))
+  print(newx)
+  print(newa)
+  Argument_List<-data.frame("x"=newx, "y"=newy, "total_cost"=TC)
   return(Argument_List)
   #return(c(x,y,TC))
 }
