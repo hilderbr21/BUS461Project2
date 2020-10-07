@@ -36,10 +36,12 @@ B1Policy <- function(D,A,v,r,B1,xL,sigmaL,epsilon=0.001,kmin=100,iterlimit=0) {
     Qdiff[i] <- abs(Q[i] - Q[i-1])
     kdif[i] <- abs(k[i] - k[i-1])
     
+    #break for loop if converged
     if(Qdiff[i] <= sigmaL & kdiff[i] <= sigmaL){
       break
     }
   }
+  
   
   
 }
