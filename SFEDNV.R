@@ -5,7 +5,7 @@
 
 #@Joe: To fix your iterlimit problem, you need to set a default similar to how 
 #epsilon has a default. Mitchell recommends in the FAQ to set it to 100
-SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
+SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   
   #validity check
   if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")
@@ -43,30 +43,23 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
     if(abs((x[j] - x[j-1])) <= epsilon){
       #if both if statements are true, then convergence has occured
       if((y[j] - y[j-1]) <= epsilon){
-        #@Joe: you need to define convergance here
-        #convergance <- TRUE
+        convergance <- TRUE
         TC<-w*sqrt((abs(x-a) + abs(y-b)))
         #@Joe: since Convergance has occurred, then you do not need to continue
         #the function
         #return(c(x, y, TC, convergance, iterations))
-      } else {
-        #convergance has not occured, continue iterating through the for-loop
-      }
-      #@Joe: You need to remove this return statement, it is within the for loop, 
-      #so it ends the for loop (as well as the entire function) before it gets a chance
-      #to repeat itself.
-      return(c(x, y, TC, Convergance, iterations))
+      }  
+        convergence <- FALSE #convergance has not occured, continue iterating through the for-loop
+     
     }
-    #@Joe: This is outside the for loop, move your return statement here and
-    #replace Convergence with FALSE.
-  
-    #PLEASE REMOVE THE @Joe COMMENTS AFTER YOU HAVE MADE THE PROPOSED CHANGES
+    
   } 
 
   #if test passes, calculate Total Cost
   TC<-w*sqrt((abs(x-a) + abs(y-b)))
-  Argument_List<-list(x, y, TC )
+  Argument_List<-data.frame("x"=x, "y"=y, "Total Cost"=TC)
   return(Argument_List)
+  #return(c(x,y,TC))
 }
 
 

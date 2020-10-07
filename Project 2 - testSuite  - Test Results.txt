@@ -183,7 +183,7 @@ Executing test function test.B1PolicyValidLengths  ...  done successfully.
 
 Executing test function test.B1PolicyValidNumerics  ...  done successfully.
 
-RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+RUNIT TEST PROTOCOL -- Tue Oct 06 22:10:12 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -204,11 +204,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDVUnitTests.R 
-test.SFRDVExample1: (3 checks) ... OK (0.08 seconds)
-test.SFRDVExample2: (15 checks) ... OK (0.09 seconds)
-test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDVExample1: (3 checks) ... OK (0.06 seconds)
+test.SFRDVExample2: (15 checks) ... OK (0.25 seconds)
+test.SFRDVValidLengths: (3 checks) ... OK (0.01 seconds)
 test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+RUNIT TEST PROTOCOL -- Tue Oct 06 22:10:12 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -229,11 +229,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDNVUnitTests.R 
-test.SFRDNVExample1: (3 checks) ... OK (0.02 seconds)
-test.SFRDNVExample2: (15 checks) ... OK (0.03 seconds)
+test.SFRDNVExample1: (3 checks) ... OK (0 seconds)
+test.SFRDNVExample2: (15 checks) ... OK (0.05 seconds)
 test.SFRDNVValidLengths: (3 checks) ... OK (0 seconds)
 test.SFRDNVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+RUNIT TEST PROTOCOL -- Tue Oct 06 22:10:12 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 5 
@@ -279,7 +279,7 @@ Error in SFEDV(0, b, w) :
 test.SFEDVValidNumerics: ERROR !! 
 Error in SFEDV(nonnum, b, w) : 
   argument "iterlimit" is missing, with no default
-RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+RUNIT TEST PROTOCOL -- Tue Oct 06 22:10:12 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 4 
@@ -288,18 +288,21 @@ Number of failures: 1
  
 1 Test Suite : 
 runitSFEDNVUnitTests - 5 test functions, 4 errors, 1 failure
-ERROR in test.SFEDNVExample1: Error in SFEDNV(a, b, w) : 
-  argument "iterlimit" is missing, with no default
-ERROR in test.SFEDNVExample2: Error in SFEDNV(a, b, w) : 
-  argument "iterlimit" is missing, with no default
-FAILURE in test.SFEDNVExample3: Error in checkEquals(expected$x, actual$x) : Modes: numeric, NULL
-Lengths: 1, 0
-target is numeric, current is NULL
+ERROR in test.SFEDNVExample1: Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
+ERROR in test.SFEDNVExample2: Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
+ERROR in test.SFEDNVExample3: Error in data.frame(x = x, y = y, `Total Cost` = TC) : 
+  arguments imply differing number of rows: 9, 14
+FAILURE in test.SFEDNVValidLengths: Error in checkEquals(-1, SFEDNV(a, b, w, 0.001, seq(0.001, 0.01, 0.001))) : 
+  Modes: numeric, list
+Lengths: 1, 3
+names for current but not for target
+Attributes: < target is NULL, current is list >
+target is numeric, current is data.frame
 
-ERROR in test.SFEDNVValidLengths: Error in SFEDNV(0, b, w) : 
-  argument "iterlimit" is missing, with no default
-ERROR in test.SFEDNVValidNumerics: Error in SFEDNV(nonnum, b, w) : 
-  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDNVValidNumerics: Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
 
 
 
@@ -313,23 +316,26 @@ Involved directory:
 --------------------------- 
 Test file: ./runitSFEDNVUnitTests.R 
 test.SFEDNVExample1: ERROR !! 
-Error in SFEDNV(a, b, w) : 
-  argument "iterlimit" is missing, with no default
+Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
 test.SFEDNVExample2: ERROR !! 
-Error in SFEDNV(a, b, w) : 
-  argument "iterlimit" is missing, with no default
-test.SFEDNVExample3: FAILURE !! (check number 1)
-Error in checkEquals(expected$x, actual$x) : Modes: numeric, NULL
-Lengths: 1, 0
-target is numeric, current is NULL
+Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
+test.SFEDNVExample3: ERROR !! 
+Error in data.frame(x = x, y = y, `Total Cost` = TC) : 
+  arguments imply differing number of rows: 9, 14
+test.SFEDNVValidLengths: FAILURE !! (check number 4)
+Error in checkEquals(-1, SFEDNV(a, b, w, 0.001, seq(0.001, 0.01, 0.001))) : 
+  Modes: numeric, list
+Lengths: 1, 3
+names for current but not for target
+Attributes: < target is NULL, current is list >
+target is numeric, current is data.frame
 
-test.SFEDNVValidLengths: ERROR !! 
-Error in SFEDNV(0, b, w) : 
-  argument "iterlimit" is missing, with no default
 test.SFEDNVValidNumerics: ERROR !! 
-Error in SFEDNV(nonnum, b, w) : 
-  argument "iterlimit" is missing, with no default
-RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+Error in if (abs((x[j] - x[j - 1])) <= epsilon) { : 
+  missing value where TRUE/FALSE needed
+RUNIT TEST PROTOCOL -- Tue Oct 06 22:10:12 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 4 
@@ -370,26 +376,49 @@ Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) :
 
 Test Results by class:
 
-   Class/Function               Test.Function Checks Test.Result Elapsed.Time
-1           SFRDV          test.SFRDVExample1      3     success         0.08
-2           SFRDV          test.SFRDVExample2     15     success         0.09
-3           SFRDV      test.SFRDVValidLengths      3     success            0
-4           SFRDV     test.SFRDVValidNumerics      4     success            0
-5          SFRDNV         test.SFRDNVExample1      3     success         0.02
-6          SFRDNV         test.SFRDNVExample2     15     success         0.03
-7          SFRDNV     test.SFRDNVValidLengths      3     success            0
-8          SFRDNV    test.SFRDNVValidNumerics      4     success            0
-9           SFEDV          test.SFEDVExample1      0       error          Inf
-10          SFEDV          test.SFEDVExample2      0       error          Inf
-11          SFEDV          test.SFEDVExample3      0       error          Inf
-12          SFEDV      test.SFEDVValidLengths      0       error          Inf
-13          SFEDV     test.SFEDVValidNumerics      0       error          Inf
-14         SFEDNV         test.SFEDNVExample1      0       error          Inf
-15         SFEDNV         test.SFEDNVExample2      0       error          Inf
-16         SFEDNV         test.SFEDNVExample3      0     failure          Inf
-17         SFEDNV     test.SFEDNVValidLengths      0       error          Inf
-18         SFEDNV    test.SFEDNVValidNumerics      0       error          Inf
-19       B1Policy       test.B1PolicyExample1      0       error          Inf
-20       B1Policy test.B1PolicyRandomExamples      0       error          Inf
-21       B1Policy   test.B1PolicyValidLengths      0       error          Inf
-22       B1Policy  test.B1PolicyValidNumerics      0       error          Inf
+   Class/Function               Test.Function Checks Test.Result
+1           SFRDV          test.SFRDVExample1      3     success
+2           SFRDV          test.SFRDVExample2     15     success
+3           SFRDV      test.SFRDVValidLengths      3     success
+4           SFRDV     test.SFRDVValidNumerics      4     success
+5          SFRDNV         test.SFRDNVExample1      3     success
+6          SFRDNV         test.SFRDNVExample2     15     success
+7          SFRDNV     test.SFRDNVValidLengths      3     success
+8          SFRDNV    test.SFRDNVValidNumerics      4     success
+9           SFEDV          test.SFEDVExample1      0       error
+10          SFEDV          test.SFEDVExample2      0       error
+11          SFEDV          test.SFEDVExample3      0       error
+12          SFEDV      test.SFEDVValidLengths      0       error
+13          SFEDV     test.SFEDVValidNumerics      0       error
+14         SFEDNV         test.SFEDNVExample1      0       error
+15         SFEDNV         test.SFEDNVExample2      0       error
+16         SFEDNV         test.SFEDNVExample3      0       error
+17         SFEDNV     test.SFEDNVValidLengths      0     failure
+18         SFEDNV    test.SFEDNVValidNumerics      0       error
+19       B1Policy       test.B1PolicyExample1      0       error
+20       B1Policy test.B1PolicyRandomExamples      0       error
+21       B1Policy   test.B1PolicyValidLengths      0       error
+22       B1Policy  test.B1PolicyValidNumerics      0       error
+   Elapsed.Time
+1          0.06
+2          0.25
+3          0.01
+4             0
+5             0
+6          0.05
+7             0
+8             0
+9           Inf
+10          Inf
+11          Inf
+12          Inf
+13          Inf
+14          Inf
+15          Inf
+16          Inf
+17          Inf
+18          Inf
+19          Inf
+20          Inf
+21          Inf
+22          Inf
