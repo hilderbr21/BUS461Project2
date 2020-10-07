@@ -39,192 +39,201 @@ Total Cost 24353602.84 24353602.84
 
 
 
-              Expec
-
-Executing test function test.B1Policyinvalid  ...  done successfully.
-
-
-
-Executing test function test.B1Policyvalid  ...  done successfully.
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
 
 
 
-Executing test function test.SFEDNVinvalid  ...  done successfully.
+
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
+
+
+ done successfully.
 
 
 
-Executing test function test.SFEDNVvalid  ...  done successfully.
+Executing test function test.SFRDVValidLengths  ...  done successfully.
 
 
 
-Executing test function test.SFEDVinvalid  ...  done successfully.
+Executing test function test.SFRDVValidNumerics  ...  done successfully.
 
 
 
-Executing test function test.SFEDVvalid  ...  done successfully.
+Executing test function test.SFRDNVExample1  ... 
+
+           Expected Actual
+x                 6      6
+y                 8      8
+Total Cost     1175   1175
+
+
+ done successfully.
 
 
 
-Executing test function test.SFRDNVinvalid  ...  done successfully.
+Executing test function test.SFRDNVExample2  ... 
+
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
 
 
 
-Executing test function test.SFRDNVvalid  ...  done successfully.
+
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.80 24353602.84
 
 
 
-Executing test function test.SFRDVinvalid  ...  done successfully.
+
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
 
 
 
-Executing test function test.SFRDVvalid  ...  done successfully.
 
-RUNIT TEST PROTOCOL -- Tue Oct 06 02:09:36 2020 
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
+
+
+
+
+              Expected      Actual
+x                54.19       54.19
+y                88.23       88.23
+Total Cost 24353602.84 24353602.84
+
+
+ done successfully.
+
+
+
+Executing test function test.SFRDNVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFRDNVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFEDVExample3  ...  done successfully.
+
+
+
+Executing test function test.SFEDVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFEDVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample1  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample2  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVExample3  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVValidLengths  ...  done successfully.
+
+
+
+Executing test function test.SFEDNVValidNumerics  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyExample1  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyRandomExamples  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyValidLengths  ...  done successfully.
+
+
+
+Executing test function test.B1PolicyValidNumerics  ...  done successfully.
+
+RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
 *********************************************** 
-Number of test functions: 10 
-Number of errors: 4 
-Number of failures: 2 
-
- 
-1 Test Suite : 
-AllTests - 10 test functions, 4 errors, 2 failures
-ERROR in test.B1Policyvalid: Error in B1Policy(D, A, v, r, B1, xl, sl) : object 'a' not found
-ERROR in test.SFEDNVvalid: Error in SFEDNV(a, b, w, epsilon = 0.01, iterlimit = iterlimit) : 
-  object 'TC' not found
-ERROR in test.SFEDVinvalid: Error in is.vector(b, mode = "numeric") : 
-  argument "b" is missing, with no default
-ERROR in test.SFEDVvalid: Error in SFEDV(a, b, w, iterlimit = iterlimit) : object 'TC' not found
-FAILURE in test.SFRDNVvalid: Error in checkEquals(c(6, 8, 1175), SFRDNV(a, b, w)) : 
-  Modes: numeric, list
-names for current but not for target
-Attributes: < target is NULL, current is list >
-target is numeric, current is data.frame
-
-FAILURE in test.SFRDVvalid: Error in checkEquals(c(6, 8, 1175), SFRDV(a, b, w)) : 
-  Modes: numeric, list
-names for current but not for target
-Attributes: < target is NULL, current is list >
-target is numeric, current is data.frame
-
-
-
-
-Details 
-*************************** 
-Test Suite: AllTests 
-Test function regexp: test.+ 
-Test file regexp: ^xrunit*.+\.R 
-Involved directory: 
-C:/Git/GitHub/BUS461Project2 
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitB1Policy.R 
-test.B1Policyinvalid: (0 checks) ... OK (0 seconds)
-test.B1Policyvalid: ERROR !! 
-Error in B1Policy(D, A, v, r, B1, xl, sl) : object 'a' not found
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFEDNV.R 
-test.SFEDNVinvalid: (5 checks) ... OK (0 seconds)
-test.SFEDNVvalid: ERROR !! 
-Error in SFEDNV(a, b, w, epsilon = 0.01, iterlimit = iterlimit) : 
-  object 'TC' not found
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFEDV.R 
-test.SFEDVinvalid: ERROR !! 
-Error in is.vector(b, mode = "numeric") : 
-  argument "b" is missing, with no default
-test.SFEDVvalid: ERROR !! 
-Error in SFEDV(a, b, w, iterlimit = iterlimit) : object 'TC' not found
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFRDNV.R 
-test.SFRDNVinvalid: (4 checks) ... OK (0 seconds)
-test.SFRDNVvalid: FAILURE !! (check number 1)
-Error in checkEquals(c(6, 8, 1175), SFRDNV(a, b, w)) : 
-  Modes: numeric, list
-names for current but not for target
-Attributes: < target is NULL, current is list >
-target is numeric, current is data.frame
-
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFRDV.R 
-test.SFRDVinvalid: (4 checks) ... OK (0 seconds)
-test.SFRDVvalid: FAILURE !! (check number 1)
-Error in checkEquals(c(6, 8, 1175), SFRDV(a, b, w)) : 
-  Modes: numeric, list
-names for current but not for target
-Attributes: < target is NULL, current is list >
-target is numeric, current is data.frame
-
-
-
-Executing test function test.B1Policyinvalid  ...  done successfully.
-
-
-
-Executing test function test.B1Policyvalid  ...  done successfully.
-
-
-
-Executing test function test.SFEDNVinvalid  ...  done successfully.
-
-
-
-Executing test function test.SFEDNVvalid  ...  done successfully.
-
-
-
-Executing test function test.SFEDVinvalid  ...  done successfully.
-
-
-
-Executing test function test.SFEDVvalid  ...  done successfully.
-
-RUNIT TEST PROTOCOL -- Tue Oct 06 02:11:06 2020 
-*********************************************** 
-Number of test functions: 6 
-Number of errors: 4 
+Number of test functions: 4 
+Number of errors: 0 
 Number of failures: 0 
 
  
 1 Test Suite : 
-AllTests - 6 test functions, 4 errors, 0 failures
-ERROR in test.B1Policyvalid: Error in 2(D * A) : attempt to apply non-function
-ERROR in test.SFEDNVvalid: Error in SFEDNV(a, b, w, epsilon = 0.01, iterlimit = iterlimit) : 
-  object 'convergance' not found
-ERROR in test.SFEDVinvalid: Error in is.vector(b, mode = "numeric") : 
-  argument "b" is missing, with no default
-ERROR in test.SFEDVvalid: Error in SFEDV(a, b, w, iterlimit = iterlimit) : 
-  object 'convergance' not found
+runitSFRDVUnitTests - 4 test functions, 0 errors, 0 failures
 
 
 
 Details 
 *************************** 
-Test Suite: AllTests 
-Test function regexp: test.+ 
-Test file regexp: ^xrunit*.+\.R 
+Test Suite: runitSFRDVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFRDVUnitTests.R$ 
 Involved directory: 
-C:/Git/GitHub/BUS461Project2 
+. 
 --------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitB1Policy.R 
-test.B1Policyinvalid: (0 checks) ... OK (0 seconds)
-test.B1Policyvalid: ERROR !! 
-Error in 2(D * A) : attempt to apply non-function
+Test file: ./runitSFRDVUnitTests.R 
+test.SFRDVExample1: (3 checks) ... OK (0.08 seconds)
+test.SFRDVExample2: (15 checks) ... OK (0.09 seconds)
+test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
+RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+*********************************************** 
+Number of test functions: 4 
+Number of errors: 0 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+runitSFRDNVUnitTests - 4 test functions, 0 errors, 0 failures
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFRDNVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFRDNVUnitTests.R$ 
+Involved directory: 
+. 
 --------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFEDNV.R 
-test.SFEDNVinvalid: (5 checks) ... OK (0 seconds)
-test.SFEDNVvalid: ERROR !! 
-Error in SFEDNV(a, b, w, epsilon = 0.01, iterlimit = iterlimit) : 
-  object 'convergance' not found
---------------------------- 
-Test file: C:/Git/GitHub/BUS461Project2/xrunitSFEDV.R 
-test.SFEDVinvalid: ERROR !! 
-Error in is.vector(b, mode = "numeric") : 
-  argument "b" is missing, with no default
-test.SFEDVvalid: ERROR !! 
-Error in SFEDV(a, b, w, iterlimit = iterlimit) : 
-  object 'convergance' not found
-ith no default
-RUNIT TEST PROTOCOL -- Tue Oct 06 02:04:18 2020 
+Test file: ./runitSFRDNVUnitTests.R 
+test.SFRDNVExample1: (3 checks) ... OK (0.02 seconds)
+test.SFRDNVExample2: (15 checks) ... OK (0.03 seconds)
+test.SFRDNVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDNVValidNumerics: (4 checks) ... OK (0 seconds)
+RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 5 
@@ -232,12 +241,61 @@ Number of failures: 0
 
  
 1 Test Suite : 
-runitSFEDNVUnitTests - 5 test functions, 5 errors, 0 failures
+runitSFEDVUnitTests - 5 test functions, 5 errors, 0 failures
+ERROR in test.SFEDVExample1: Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVExample2: Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVExample3: Error in if (abs((x[j] - x[j - 1])) <= epsilon) if ((y[j] - y[j - 1]) <=  : 
+  missing value where TRUE/FALSE needed
+ERROR in test.SFEDVValidLengths: Error in SFEDV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+ERROR in test.SFEDVValidNumerics: Error in SFEDV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+
+
+
+Details 
+*************************** 
+Test Suite: runitSFEDVUnitTests 
+Test function regexp: ^test.+ 
+Test file regexp: ^runitSFEDVUnitTests.R$ 
+Involved directory: 
+. 
+--------------------------- 
+Test file: ./runitSFEDVUnitTests.R 
+test.SFEDVExample1: ERROR !! 
+Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVExample2: ERROR !! 
+Error in SFEDV(a, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVExample3: ERROR !! 
+Error in if (abs((x[j] - x[j - 1])) <= epsilon) if ((y[j] - y[j - 1]) <=  : 
+  missing value where TRUE/FALSE needed
+test.SFEDVValidLengths: ERROR !! 
+Error in SFEDV(0, b, w) : 
+  argument "iterlimit" is missing, with no default
+test.SFEDVValidNumerics: ERROR !! 
+Error in SFEDV(nonnum, b, w) : 
+  argument "iterlimit" is missing, with no default
+RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
+*********************************************** 
+Number of test functions: 5 
+Number of errors: 4 
+Number of failures: 1 
+
+ 
+1 Test Suite : 
+runitSFEDNVUnitTests - 5 test functions, 4 errors, 1 failure
 ERROR in test.SFEDNVExample1: Error in SFEDNV(a, b, w) : 
   argument "iterlimit" is missing, with no default
 ERROR in test.SFEDNVExample2: Error in SFEDNV(a, b, w) : 
   argument "iterlimit" is missing, with no default
-ERROR in test.SFEDNVExample3: Error in SFEDNV(a, b, w, iterlimit = 8) : object 'TC' not found
+FAILURE in test.SFEDNVExample3: Error in checkEquals(expected$x, actual$x) : Modes: numeric, NULL
+Lengths: 1, 0
+target is numeric, current is NULL
+
 ERROR in test.SFEDNVValidLengths: Error in SFEDNV(0, b, w) : 
   argument "iterlimit" is missing, with no default
 ERROR in test.SFEDNVValidNumerics: Error in SFEDNV(nonnum, b, w) : 
@@ -260,15 +318,18 @@ Error in SFEDNV(a, b, w) :
 test.SFEDNVExample2: ERROR !! 
 Error in SFEDNV(a, b, w) : 
   argument "iterlimit" is missing, with no default
-test.SFEDNVExample3: ERROR !! 
-Error in SFEDNV(a, b, w, iterlimit = 8) : object 'TC' not found
+test.SFEDNVExample3: FAILURE !! (check number 1)
+Error in checkEquals(expected$x, actual$x) : Modes: numeric, NULL
+Lengths: 1, 0
+target is numeric, current is NULL
+
 test.SFEDNVValidLengths: ERROR !! 
 Error in SFEDNV(0, b, w) : 
   argument "iterlimit" is missing, with no default
 test.SFEDNVValidNumerics: ERROR !! 
 Error in SFEDNV(nonnum, b, w) : 
   argument "iterlimit" is missing, with no default
-RUNIT TEST PROTOCOL -- Tue Oct 06 02:04:18 2020 
+RUNIT TEST PROTOCOL -- Tue Oct 06 21:49:57 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 4 
@@ -310,12 +371,12 @@ Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) :
 Test Results by class:
 
    Class/Function               Test.Function Checks Test.Result Elapsed.Time
-1           SFRDV          test.SFRDVExample1      3     success         0.03
-2           SFRDV          test.SFRDVExample2     15     success         0.03
+1           SFRDV          test.SFRDVExample1      3     success         0.08
+2           SFRDV          test.SFRDVExample2     15     success         0.09
 3           SFRDV      test.SFRDVValidLengths      3     success            0
 4           SFRDV     test.SFRDVValidNumerics      4     success            0
-5          SFRDNV         test.SFRDNVExample1      3     success         0.05
-6          SFRDNV         test.SFRDNVExample2     15     success            0
+5          SFRDNV         test.SFRDNVExample1      3     success         0.02
+6          SFRDNV         test.SFRDNVExample2     15     success         0.03
 7          SFRDNV     test.SFRDNVValidLengths      3     success            0
 8          SFRDNV    test.SFRDNVValidNumerics      4     success            0
 9           SFEDV          test.SFEDVExample1      0       error          Inf
@@ -325,7 +386,7 @@ Test Results by class:
 13          SFEDV     test.SFEDVValidNumerics      0       error          Inf
 14         SFEDNV         test.SFEDNVExample1      0       error          Inf
 15         SFEDNV         test.SFEDNVExample2      0       error          Inf
-16         SFEDNV         test.SFEDNVExample3      0       error          Inf
+16         SFEDNV         test.SFEDNVExample3      0     failure          Inf
 17         SFEDNV     test.SFEDNVValidLengths      0       error          Inf
 18         SFEDNV    test.SFEDNVValidNumerics      0       error          Inf
 19       B1Policy       test.B1PolicyExample1      0       error          Inf

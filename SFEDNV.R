@@ -39,8 +39,8 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
     y[j] <-yNumerTemp/yDenomTemp
     iterations <- j-1
 
-   # test for convergence  
-    if(abs((x[j] - x[j-1])) <= epsilon)
+    # test for convergence  
+    if(abs((x[j] - x[j-1])) <= epsilon){
       #if both if statements are true, then convergence has occured
       if((y[j] - y[j-1]) <= epsilon){
         #@Joe: you need to define convergance here
@@ -52,26 +52,21 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit) {
       } else {
         #convergance has not occured, continue iterating through the for-loop
       }
-    #@Joe: You need to remove this return statement, it is within the for loop, 
-    #so it ends the for loop (as well as the entire function) before it gets a chance
-    #to repeat itself.
-    return(c(x, y, TC, Convergance, iterations))
-  }
-  #@Joe: This is outside the for loop, move your return statement here and
-  #replace Convergence with FALSE.
-  
-  #PLEASE REMOVE THE @Joe COMMENTS AFTER YOU HAVE MADE THE PROPOSED CHANGES
-} 
-
-      #if test passes, calculate Total Cost
-      TC<-w*sqrt((abs(x-a) + abs(y-b)))
-      Argument_List<-list(x, y, TC )
-      return(Argument_List)
+      #@Joe: You need to remove this return statement, it is within the for loop, 
+      #so it ends the for loop (as well as the entire function) before it gets a chance
+      #to repeat itself.
+      return(c(x, y, TC, Convergance, iterations))
     }
-   return(-1)
-  }
+    #@Joe: This is outside the for loop, move your return statement here and
+    #replace Convergence with FALSE.
+  
+    #PLEASE REMOVE THE @Joe COMMENTS AFTER YOU HAVE MADE THE PROPOSED CHANGES
+  } 
 
+  #if test passes, calculate Total Cost
+  TC<-w*sqrt((abs(x-a) + abs(y-b)))
+  Argument_List<-list(x, y, TC )
+  return(Argument_List)
 }
->>>>>>> Stashed changes
 
 
