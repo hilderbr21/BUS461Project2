@@ -27,6 +27,8 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   x <- c(sum(w*a)/sum(w))
   y <- c(sum(w*b)/sum(w))
 
+
+  iterationsdf <- NULL#setNames(data.frame(matrix(ncol = 3, nrow = 0)), c("x", "y", "Total Cost"))
   
   # calculate revised coordinates
   for(j in 2:(iterlimit+1)){
@@ -46,24 +48,23 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
     print(gi)
     print(xNumerTemp)
     
-    x[j] <-xNumerTemp/DenomTemp
+    x[j] <- xNumerTemp/DenomTemp
     y[j] <- yNumerTemp/DenomTemp
     
-    print(x[j])
+    for(l in length(w)){#vectorize this
+      TC <- w[l]*sqrt((x[j]-a[l])**2 + (y[j]-b[l])**2)
+    }
+    
+    iterationsdf <- rbind(iterationsdf, data.frame("x"=x[j],"y"=y[j],"Total Cost" = TC))
+    print(iterationsdf)
     # test for convergence
-    if(abs(x[j] - x[j-1]) <= epsilon | abs(y[j] - y[j-1]) <= epsilon){
+    if(abs(x[j] - x[j-1]) <= epsilon && abs(y[j] - y[j-1]) <= epsilon){
       print("true!!!!!!!!!!!!")
       convergance <- TRUE
       
       #convergence has occurred, return x, y, and Total Cost.
-      for(l in length(w)){#vectorize this
-        TC <- w[l]*sqrt((x[j]-a[l])**2 + (y[j]-b[l])**2)
-      }
-      
-      dfx <- x[j]
-      dfy <- y[j]
-      converge <- list("x"=dfx, "y"=dfy, "Total Cost"=TC)
-      return(converge) #the returned list is edited to comply with provided unit test
+      converge <- list(x=x[j], y=y[j], total_cost=TC, TRUE, iterationsdf)
+      return(converge)
     }
   } 
 
