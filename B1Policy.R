@@ -44,12 +44,12 @@ B1Policy <- function(D,A,v,r,B1,xL,sigmaL,epsilon=0.001,kmin=100,iterlimit=0) {
   }
   
   # trim vectors to remove unused iterations
-  tempQ[i] <- Q[]
-  temps[i] <- 
-  tempTRC[i] <- 
-  tempQdiff[i] <- 
-  tempkdif[i] <- 
-  for()
+  #tempQ[i] <- Q[]
+  #temps[i] <- 
+  #tempTRC[i] <- 
+  #tempQdiff[i] <- 
+  #tempkdif[i] <- 
+  #for()
   
   #return(data.frame("s"=s[i], "k"=k[i], "Q"=Q[i], "TRC"=TRC[i], "kdiff"=kdiff[i], "Qdiff"=Qdiff[i])) 
              

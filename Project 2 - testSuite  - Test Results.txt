@@ -149,176 +149,144 @@ Executing test function test.SFEDVValidNumerics  ...  done successfully.
 
 
 
-Executing test function test.SFEDNVExample1  ... [1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] 7
-[1] 4
- done successfully.
-
-
-
-Executing test function test.SFEDNVExample2  ... [1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
+Executing test function test.SFEDNVExample1  ... [1] 14
+[1] 0.9849174
+[1] 342.484
+[1] 6.814579
+[1] 14
+[1] 0.9210363
+[1] 362.024
+[1] 7.034887
+[1] 14
+[1] 0.880906
+[1] 380.0648
+[1] 7.200803
+[1] 14
+[1] 0.8536532
+[1] 395.9153
+[1] 7.326036
+[1] 14
+[1] 0.8342517
+[1] 409.4683
+[1] 7.421153
+[1] 14
+[1] 0.8200356
+[1] 420.8477
+[1] 7.493893
+[1] 14
+[1] 0.8094215
+[1] 430.2733
+[1] 7.54986
+[1] 14
+[1] 0.8013925
+[1] 437.999
+[1] 7.593137
+[1] 14
+[1] 0.7952613
+[1] 444.2789
+[1] 7.626732
+[1] 14
+[1] 0.7905462
+[1] 449.35
+[1] 7.652892
+[1] 14
+[1] 0.7869007
+[1] 453.4235
+[1] 7.673312
+[1] 14
+[1] 0.7840708
+[1] 456.682
+[1] 7.689281
+[1] 14
+[1] 0.7818671
+[1] 459.2801
+[1] 7.701788
 [1] "true!!!!!!!!!!!!"
-           x       y Total.Cost
-1   51.70299 94.7178  21153.033
-2   51.70299 94.7178  10227.739
-3   51.70299 94.7178   6198.422
-4   51.70299 94.7178   5895.694
-5   51.70299 94.7178  23002.379
-6   51.70299 94.7178  21073.617
-7   51.70299 94.7178  13636.446
-8   51.70299 94.7178  11125.251
-9   51.70299 94.7178   8106.363
-10  51.70299 94.7178  16532.990
-11  51.70299 94.7178  15890.074
-12  51.70299 94.7178  24909.670
-13  51.70299 94.7178  13279.079
-14  51.70299 94.7178   5517.364
-15  51.70299 94.7178  18874.500
-16  51.70299 94.7178  24649.225
-17  51.70299 94.7178   7748.455
-18  51.70299 94.7178  24516.542
-19  51.70299 94.7178  18758.978
-20  51.70299 94.7178   7814.286
-21  51.70299 94.7178  25436.930
-22  51.70299 94.7178  22307.343
-23  51.70299 94.7178  24441.066
-24  51.70299 94.7178  12239.681
-25  51.70299 94.7178  25186.862
-26  51.70299 94.7178   4766.605
-27  51.70299 94.7178  21019.094
-28  51.70299 94.7178  25474.083
-29  51.70299 94.7178   7974.446
-30  51.70299 94.7178  22994.521
-31  51.70299 94.7178  18695.411
-32  51.70299 94.7178   5020.292
-33  51.70299 94.7178   6638.318
-34  51.70299 94.7178  18242.728
-35  51.70299 94.7178  10195.752
-36  51.70299 94.7178   9519.329
-37  51.70299 94.7178   7867.450
-38  51.70299 94.7178  24183.057
-39  51.70299 94.7178  23589.743
-40  51.70299 94.7178  10746.014
-41  51.70299 94.7178   9869.903
-42  51.70299 94.7178  15730.361
-43  51.70299 94.7178  21441.728
-44  51.70299 94.7178   9057.123
-45  51.70299 94.7178  10217.396
-46  51.70299 94.7178  16709.087
-47  51.70299 94.7178  10388.673
-48  51.70299 94.7178   6978.911
-49  51.70299 94.7178  15628.231
-50  51.70299 94.7178  11048.047
-51  51.70299 94.7178  22864.828
-52  51.70299 94.7178  11845.999
-53  51.70299 94.7178  12086.476
-54  51.70299 94.7178   5933.880
-55  51.70299 94.7178  24820.290
-56  51.70299 94.7178  15358.289
-57  51.70299 94.7178  18961.390
-58  51.70299 94.7178  17426.500
-59  51.70299 94.7178  21485.637
-60  51.70299 94.7178  15619.552
-61  51.70299 94.7178  23031.855
-62  51.70299 94.7178  25061.310
-63  51.70299 94.7178   4420.515
-64  51.70299 94.7178  19698.068
-65  51.70299 94.7178  25443.267
-66  51.70299 94.7178  22487.768
-67  51.70299 94.7178   7993.569
-68  51.70299 94.7178  20470.918
-69  51.70299 94.7178   8923.199
-70  51.70299 94.7178  23648.039
-71  51.70299 94.7178  17466.942
-72  51.70299 94.7178  19512.060
-73  51.70299 94.7178  11886.297
-74  51.70299 94.7178  22782.721
-75  51.70299 94.7178  14853.992
-76  51.70299 94.7178  18615.398
-77  51.70299 94.7178   7107.730
-78  51.70299 94.7178  12917.107
-79  51.70299 94.7178   4943.774
-80  51.70299 94.7178   8176.697
-81  51.70299 94.7178  11995.378
-82  51.70299 94.7178   8847.503
-83  51.70299 94.7178   9980.067
-84  51.70299 94.7178   8918.699
-85  51.70299 94.7178  24610.484
-86  51.70299 94.7178   4476.390
-87  51.70299 94.7178   8497.132
-88  51.70299 94.7178  24552.817
-89  51.70299 94.7178   7726.317
-90  51.70299 94.7178   5740.877
-91  51.70299 94.7178   9411.241
-92  51.70299 94.7178   7202.192
-93  51.70299 94.7178   4299.764
-94  51.70299 94.7178   7746.117
-95  51.70299 94.7178   4916.976
-96  51.70299 94.7178  14733.033
-97  51.70299 94.7178  20558.217
-98  51.70299 94.7178  22430.739
-99  51.70299 94.7178  25377.178
-100 51.70299 94.7178  15721.794
  done successfully.
 
 
 
-Executing test function test.SFEDNVExample3  ... [1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] "iterlimit"
-[1] 6.6
-[1] 6
+Executing test function test.SFEDNVExample2  ... [1] 100
+[1] 68.33629
+[1] 440551.8
+[1] 53.41928
+[1] 100
+[1] 70.44207
+[1] 439869.9
+[1] 54.08405
+[1] 100
+[1] 71.92203
+[1] 440358.8
+[1] 54.43649
+[1] 100
+[1] 72.92668
+[1] 441300.8
+[1] 54.63777
+[1] 100
+[1] 73.58602
+[1] 442144.9
+[1] 54.75792
+[1] 100
+[1] 74.01037
+[1] 442774
+[1] 54.83143
+[1] 100
+[1] 74.28054
+[1] 443208.3
+[1] 54.877
+[1] 100
+[1] 74.45149
+[1] 443496.8
+[1] 54.90545
+[1] 100
+[1] 74.5593
+[1] 443684.3
+[1] 54.92327
+[1] 100
+[1] 74.62715
+[1] 443804.6
+[1] 54.93444
+[1] 100
+[1] 74.66981
+[1] 443881.2
+[1] 54.94146
+[1] "true!!!!!!!!!!!!"
+ done successfully.
+
+
+
+Executing test function test.SFEDNVExample3  ... [1] 14
+[1] 0.9849174
+[1] 342.484
+[1] 6.814579
+[1] 14
+[1] 0.9210363
+[1] 362.024
+[1] 7.034887
+[1] 14
+[1] 0.880906
+[1] 380.0648
+[1] 7.200803
+[1] 14
+[1] 0.8536532
+[1] 395.9153
+[1] 7.326036
+[1] 14
+[1] 0.8342517
+[1] 409.4683
+[1] 7.421153
+[1] 14
+[1] 0.8200356
+[1] 420.8477
+[1] 7.493893
+[1] 14
+[1] 0.8094215
+[1] 430.2733
+[1] 7.54986
+[1] 14
+[1] 0.8013925
+[1] 437.999
+[1] 7.593137
  done successfully.
 
 
@@ -345,11 +313,7 @@ Executing test function test.B1PolicyValidLengths  ...  done successfully.
 
 Executing test function test.B1PolicyValidNumerics  ...  done successfully.
 
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:57:44 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -370,19 +334,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDVUnitTests.R 
-<<<<<<< Updated upstream
-test.SFRDVExample1: (3 checks) ... OK (0.03 seconds)
-test.SFRDVExample2: (15 checks) ... OK (0.03 seconds)
-test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
+test.SFRDVExample1: (3 checks) ... OK (0.24 seconds)
+test.SFRDVExample2: (15 checks) ... OK (0.08 seconds)
+test.SFRDVValidLengths: (3 checks) ... OK (0.01 seconds)
 test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-test.SFRDVExample1: (3 checks) ... OK (0.31 seconds)
-test.SFRDVExample2: (15 checks) ... OK (0.07 seconds)
-test.SFRDVValidLengths: (3 checks) ... OK (0 seconds)
-test.SFRDVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:57:44 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -403,15 +359,11 @@ Involved directory:
 . 
 --------------------------- 
 Test file: ./runitSFRDNVUnitTests.R 
-test.SFRDNVExample1: (3 checks) ... OK (0 seconds)
-test.SFRDNVExample2: (15 checks) ... OK (0.02 seconds)
-test.SFRDNVValidLengths: (3 checks) ... OK (0.01 seconds)
+test.SFRDNVExample1: (3 checks) ... OK (0.02 seconds)
+test.SFRDNVExample2: (15 checks) ... OK (0.03 seconds)
+test.SFRDNVValidLengths: (3 checks) ... OK (0 seconds)
 test.SFRDNVValidNumerics: (4 checks) ... OK (0 seconds)
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:57:44 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 5 
@@ -457,11 +409,7 @@ Error in SFEDV(0, b, w) :
 test.SFEDVValidNumerics: ERROR !! 
 Error in SFEDV(nonnum, b, w) : 
   argument "iterlimit" is missing, with no default
-<<<<<<< Updated upstream
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:57:44 2020 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 0 
@@ -471,13 +419,13 @@ Number of failures: 3
 1 Test Suite : 
 runitSFEDNVUnitTests - 5 test functions, 0 errors, 3 failures
 FAILURE in test.SFEDNVExample1: Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 14) differ
+  Mean relative difference: 0.005491268
 
 FAILURE in test.SFEDNVExample2: Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 100) differ
+  Mean relative difference: 0.000207284
 
-FAILURE in test.SFEDNVExample3: Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 14) differ
+FAILURE in test.SFEDNVExample3: Error in checkEquals(expected$total_cost, actual$total_cost) : 
+  Mean relative difference: 0.9654785
 
 
 
@@ -493,25 +441,19 @@ Involved directory:
 Test file: ./runitSFEDNVUnitTests.R 
 test.SFEDNVExample1: FAILURE !! (check number 1)
 Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 14) differ
+  Mean relative difference: 0.005491268
 
 test.SFEDNVExample2: FAILURE !! (check number 1)
 Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 100) differ
+  Mean relative difference: 0.000207284
 
-test.SFEDNVExample3: FAILURE !! (check number 1)
-Error in checkEquals(expected$x, actual$x) : 
-  Numeric: lengths (1, 14) differ
+test.SFEDNVExample3: FAILURE !! (check number 3)
+Error in checkEquals(expected$total_cost, actual$total_cost) : 
+  Mean relative difference: 0.9654785
 
-<<<<<<< Updated upstream
-test.SFEDNVValidLengths: (4 checks) ... OK (0.01 seconds)
-test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 01:46:02 2020 
-=======
 test.SFEDNVValidLengths: (4 checks) ... OK (0 seconds)
 test.SFEDNVValidNumerics: (4 checks) ... OK (0 seconds)
-RUNIT TEST PROTOCOL -- Wed Oct 07 00:53:36 2020 
->>>>>>> Stashed changes
+RUNIT TEST PROTOCOL -- Wed Oct 07 16:57:44 2020 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 4 
@@ -553,18 +495,13 @@ Error in B1Policy(D, A, v, r, nonnum, xl, sl, epsilon, iterlimit, kmin) :
 Test Results by class:
 
    Class/Function               Test.Function Checks Test.Result Elapsed.Time
-<<<<<<< Updated upstream
-1           SFRDV          test.SFRDVExample1      3     success         0.03
-2           SFRDV          test.SFRDVExample2     15     success         0.03
-=======
-1           SFRDV          test.SFRDVExample1      3     success         0.31
-2           SFRDV          test.SFRDVExample2     15     success         0.07
->>>>>>> Stashed changes
-3           SFRDV      test.SFRDVValidLengths      3     success            0
+1           SFRDV          test.SFRDVExample1      3     success         0.24
+2           SFRDV          test.SFRDVExample2     15     success         0.08
+3           SFRDV      test.SFRDVValidLengths      3     success         0.01
 4           SFRDV     test.SFRDVValidNumerics      4     success            0
-5          SFRDNV         test.SFRDNVExample1      3     success            0
-6          SFRDNV         test.SFRDNVExample2     15     success         0.02
-7          SFRDNV     test.SFRDNVValidLengths      3     success         0.01
+5          SFRDNV         test.SFRDNVExample1      3     success         0.02
+6          SFRDNV         test.SFRDNVExample2     15     success         0.03
+7          SFRDNV     test.SFRDNVValidLengths      3     success            0
 8          SFRDNV    test.SFRDNVValidNumerics      4     success            0
 9           SFEDV          test.SFEDVExample1      0       error          Inf
 10          SFEDV          test.SFEDVExample2      0       error          Inf
@@ -574,11 +511,7 @@ Test Results by class:
 14         SFEDNV         test.SFEDNVExample1      0     failure          Inf
 15         SFEDNV         test.SFEDNVExample2      0     failure          Inf
 16         SFEDNV         test.SFEDNVExample3      0     failure          Inf
-<<<<<<< Updated upstream
-17         SFEDNV     test.SFEDNVValidLengths      4     success         0.01
-=======
 17         SFEDNV     test.SFEDNVValidLengths      4     success            0
->>>>>>> Stashed changes
 18         SFEDNV    test.SFEDNVValidNumerics      4     success            0
 19       B1Policy       test.B1PolicyExample1      0       error          Inf
 20       B1Policy test.B1PolicyRandomExamples      0       error          Inf
