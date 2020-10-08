@@ -25,6 +25,7 @@ SFRDNV <- function(a,b,w,epsilon=0.01) {
   sumA<-0
   sumB<-0
   
+  #cumulative sum of W until 
   for(i in 1:length(newA)){
     sumA<- newW[i] + sumA
     if(sumA >= sumWeight/2){

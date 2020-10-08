@@ -2,7 +2,7 @@
 #@author Joe Crowley
 
 
-SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
+SFEDNV <- function(a,b,w,epsilon=0.001,iterlimit=100) {
   
   #validity check
   if(!is.vector(a, mode="numeric") | !is.vector(b, mode="numeric") | !is.vector(w, mode="numeric")
@@ -19,25 +19,34 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
     }
   
   #fixes error in attempting to converge past available values
-  if(iterlimit > length(a)){
-    iterlimit <- length(a)
-  }
+  # if(iterlimit > length(a)){
+  #   iterlimit <- length(a)
+  # }
   
   # calculate x0 and y0 using calcCentroid
   x <- c(sum(w*a)/sum(w))
   y <- c(sum(w*b)/sum(w))
 
+  #iterationsdf <- NULL#setNames(data.frame(matrix(ncol = 3, nrow = 0)), c("x", "y", "Total Cost"))
+  convergance <- FALSE
+  rownames <- c(0)
 
-  iterationsdf <- NULL#setNames(data.frame(matrix(ncol = 3, nrow = 0)), c("x", "y", "Total Cost"))
+  #initialize first value for total Cost
+  TC <- 0
+  for(l in 1:length(w)){#vectorize this in SFEDV
+    TC <- TC + w[l]*sqrt(((x[1]-a[l])**2) + ((y[1]-b[l])**2))
+  }
+  totalCost <- c(TC)
   
   # calculate revised coordinates
   for(j in 2:(iterlimit+1)){
-    #reset vars
+    #reset variables (or initialize on first iteration)
     gi <- 0
     xNumerTemp<-0
     yNumerTemp<-0
     DenomTemp<-0
-    print(length(w))
+    
+    #summation xj and yj
     for(i in 1:length(w)){
       gi <- (w[i]/sqrt(((x[j-1]-a[i])**2) + ((y[j-1]-b[i])**2)))
       
@@ -45,25 +54,30 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
       yNumerTemp <- yNumerTemp + (b[i]*gi)
       DenomTemp <- DenomTemp + gi
     }
-    print(gi)
-    print(xNumerTemp)
     
+    #add to vectors
     x[j] <- xNumerTemp/DenomTemp
     y[j] <- yNumerTemp/DenomTemp
+    rownames[j] <- (j-1)
     
-    for(l in length(w)){#vectorize this
-      TC <- w[l]*sqrt((x[j]-a[l])**2 + (y[j]-b[l])**2)
+    #Summation for Total Cost
+    TC <- 0
+    for(l in 1:length(w)){#vectorize this in SFEDV
+      TC <- TC + w[l]*sqrt(((x[j]-a[l])**2) + ((y[j]-b[l])**2))
     }
+    totalCost[j] <- TC
+    #iterationsdf <- rbind(iterationsdf, data.frame("x"=x[j],"y"=y[j],"Total Cost" = TC))
+    #print(iterationsdf)
     
-    iterationsdf <- rbind(iterationsdf, data.frame("x"=x[j],"y"=y[j],"Total Cost" = TC))
-    print(iterationsdf)
     # test for convergence
     if(abs(x[j] - x[j-1]) <= epsilon && abs(y[j] - y[j-1]) <= epsilon){
       print("true!!!!!!!!!!!!")
-      convergance <- TRUE
       
       #convergence has occurred, return x, y, and Total Cost.
-      converge <- list(x=x[j], y=y[j], total_cost=TC, TRUE, iterationsdf)
+      converge <- list(x=x[j], y=y[j], total_cost=TC, converged = TRUE, data.frame("rows" = rownames,
+                                                                              "x" = x,
+                                                                              "y" = y,
+                                                                              "Total Cost" = totalCost))
       return(converge)
     }
   } 
@@ -71,12 +85,18 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
   #reached end of iterations, return total iterations
   
   #calculate total cost
+  TC <- 0
   for(l in length(w)){#vectorize this
-    TC <- w[l]*sqrt((x[iterlimit+1]-a[l])**2 + (y[iterlimit+1]-b[l])**2)
+    TC <- TC + w[l]*sqrt((x[iterlimit+1]-a[l])**2 + (y[iterlimit+1]-b[l])**2)
   }
-  
-  Argument_List<-list("x"=x[iterlimit+1], "y"=y[iterlimit+1], "total_cost"=TC)
-  return(Argument_List)
+  totalCost[iterlimit] <- TC
+
+  nonConverged_List<-list(x=x[iterlimit], y=y[iterlimit], total_cost=TC, converged = FALSE,
+                      data.frame("rows" = rownames,
+                                 "x" = x,
+                                 "y" = y,
+                                 "Total Cost" = totalCost))
+  return(nonConverged_List)
 }
 
 
