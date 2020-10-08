@@ -13,7 +13,7 @@ B1Policy <- function(D,A,v,r,B1,xl,sl,epsilon=0.001,kmin=100,iterlimit=0) {
       return(-1)
     }
   }
- # calculate the intital values  
+ # calculate the initial values  
 
   Q <- c(sqrt(2*(D*A)/(v*r)))
   k <- c(9999)
@@ -46,55 +46,7 @@ B1Policy <- function(D,A,v,r,B1,xl,sl,epsilon=0.001,kmin=100,iterlimit=0) {
   }
   
   # trim vectors to remove unused iterations
-  Qtrimmed[i] <- Q[1:NA]
-  temps[i] <- s[]
-  tempTRC[i] <- TRC[]
-  tempQdiff[i] <- Qdiff[]
-  tempkdiff[i] <- kdiff[]
-  
-  for(i in length(s)){
-    if(is.null(s[i]) | is.na(s[i])){
-      #skip
-    } else{
-      strimmed[i] <- s[i]
-    }
-  }
-  for(i in length(k)){
-    if(is.null(k[i]) | is.na(k[i])){
-      #skip
-    } else{
-      ktrimmed[i] <- k[i]
-    }
-  }
-  for(i in length(Q)){
-    if(is.null(Q[i]) | is.na(Q[i])){
-      #skip
-    } else{
-        Qtrimmed[i] <- Q[i]
-    }
-  }
-  for(i in length(TRC)){
-    if(is.null(TRC[i]) | is.na(TRC[i])){
-      #skip
-    } else{
-      TRCtrimmed[i] <- TRC[i]
-    }
-  }
-  for(i in length(kdiff)){
-    if(is.null(kdiff[i]) | is.na(kdiff[i])){
-      #skip
-    } else{
-      kdifftrimmed[i] <- kdiff[i]
-    }
-  }
-  for(i in length(Qdiff)){
-    if(is.null(Qdiff[i]) | is.na(Qdiff[i])){
-      #skip
-    } else{
-      Qdifftrimmed[i] <- Qdiff[i]
-    }
-  }
  
-  return(data.frame("s"=strimmed[i], "k"=ktrimmed[i], "Q"=Qtrimmed[i], "TRC"=TRCtrimmed[i], "kdiff"=kdifftrimmed[i], "Qdiff"=Qdifftrimmed[i])) 
+  return(data.frame("s"=s, "k"=k, "Q"=Q, "TRC"=TRC, "kdiff"=kdiff, "Qdiff"=Qdiff)) 
              
 }
