@@ -23,51 +23,60 @@ SFEDNV <- function(a,b,w,epsilon=0.01,iterlimit=100) {
     iterlimit <- length(a)
   }
   
-  # calculate x0 and y0 using calcCentroid 
-  x <- c(sum(w[1]*a[1])/sum(w[1]))
-  y <- c(sum(w[1]*b[1])/sum(w[1]))
-  xNumerTemp<-0
-  xDenomTemp<-0
-  yNumerTemp<-0
-  yDenomTemp<-0
+  # calculate x0 and y0 using calcCentroid
+  x <- c(sum(w*a)/sum(w))
+  y <- c(sum(w*b)/sum(w))
+
+
+  iterationsdf <- NULL#setNames(data.frame(matrix(ncol = 3, nrow = 0)), c("x", "y", "Total Cost"))
   
   # calculate revised coordinates
-  for(j in 2:iterlimit){
-    xNumerTemp<- xNumerTemp + (w[j]*a[j])
-    xDenomTemp <- xDenomTemp + w[j]
-    yNumerTemp <- yNumerTemp + (w[j]*b[j])
-    yDenomTemp <- yDenomTemp + w[j]
-    x[j] <-xNumerTemp/xDenomTemp
-    y[j] <- yNumerTemp/yDenomTemp
-    iterations <- j-1
-    # test for convergence
-    print("iterlimit")
+  for(j in 2:(iterlimit+1)){
+    #reset vars
+    gi <- 0
+    xNumerTemp<-0
+    yNumerTemp<-0
+    DenomTemp<-0
+    print(length(w))
+    for(i in 1:length(w)){
+      gi <- (w[i]/sqrt(((x[j-1]-a[i])**2) + ((y[j-1]-b[i])**2)))
+      
+      xNumerTemp <- xNumerTemp + (a[i]*gi)
+      yNumerTemp <- yNumerTemp + (b[i]*gi)
+      DenomTemp <- DenomTemp + gi
+    }
+    print(gi)
+    print(xNumerTemp)
     
-    if(abs(x[j] - x[j-1]) <= epsilon | abs(y[j] - y[j-1]) <= epsilon){
+    x[j] <- xNumerTemp/DenomTemp
+    y[j] <- yNumerTemp/DenomTemp
+    
+    for(l in length(w)){#vectorize this
+      TC <- w[l]*sqrt((x[j]-a[l])**2 + (y[j]-b[l])**2)
+    }
+    
+    iterationsdf <- rbind(iterationsdf, data.frame("x"=x[j],"y"=y[j],"Total Cost" = TC))
+    print(iterationsdf)
+    # test for convergence
+    if(abs(x[j] - x[j-1]) <= epsilon && abs(y[j] - y[j-1]) <= epsilon){
       print("true!!!!!!!!!!!!")
       convergance <- TRUE
-      TC<-w*sqrt((abs(x[j]-a[j]) + abs(y[j]-b[j])))
-      #convergence has occurred, return x, y, and Total Cost.
       
-      dfx <- x[j]
-      dfy <- y[j]
-      df <- data.frame("x"=dfx, "y"=dfy, "Total Cost"=TC)
-      print(df)
-      return(df)
+      #convergence has occurred, return x, y, and Total Cost.
+      converge <- list(x=x[j], y=y[j], total_cost=TC, TRUE, iterationsdf)
+      return(converge)
     }
   } 
 
   #reached end of iterations, return total iterations
-  newa <- a[iterlimit]
-  newb <- b[iterlimit]
-  newx <- x[iterlimit]
-  newy <- y[iterlimit]
-  TC<-w*sqrt((abs(newx-newa) + abs(newy-newb)))
-  print(newx)
-  print(newa)
-  Argument_List<-data.frame("x"=newx, "y"=newy, "total_cost"=TC)
+  
+  #calculate total cost
+  for(l in length(w)){#vectorize this
+    TC <- w[l]*sqrt((x[iterlimit+1]-a[l])**2 + (y[iterlimit+1]-b[l])**2)
+  }
+  
+  Argument_List<-list("x"=x[iterlimit+1], "y"=y[iterlimit+1], "total_cost"=TC)
   return(Argument_List)
-  #return(c(x,y,TC))
 }
 
 
